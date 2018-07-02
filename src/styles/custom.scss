@@ -1,0 +1,52 @@
+/********************************
+			COLOR
+*********************************/
+
+$black:#000;
+$white:#ffffff;
+
+/********************************
+			GENERAL
+*********************************/
+
+button, .btn {
+  border:1px solid white;
+}
+
+textarea, input, button, .btn, .shopify-payment-button .shopify-payment-button__button--unbranded {
+  border-radius: 0 !important;
+}
+
+textarea, input, button { outline: none; }
+
+.underline_a a { border-bottom: 1px solid; }
+
+
+/********************************
+			HEADER
+*********************************/
+
+#shopify-section-header {
+  div[data-section-id="header"] {
+    display:none;
+  }
+  .header_large {
+    padding: 40px 15px 20px;
+    .header_mini {
+      display: flex;
+    }
+  }
+}
+
+/********************************
+			MEDIA QUERIES
+*********************************/
+
+@media all and (max-width:767px) {
+  #shopify-section-header div[data-section-id="header"] {
+    display:block;
+  }
+  .header_large {
+    display:none;
+  }
+}

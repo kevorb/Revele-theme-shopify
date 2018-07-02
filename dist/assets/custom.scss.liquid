@@ -1,0 +1,76 @@
+/********************************
+			COLOR
+*********************************/
+
+$black:#000;
+$white:#ffffff;
+
+/*******************************
+      FONT
+*******************************/
+/*
+@font-face {
+  font-family: "Gobold";
+  src: url("{{ '../assets/fonts/opensans.woff2' | asset_url }}") format("woff2")
+}
+*/
+/********************************
+			GENERAL
+*********************************/
+
+button, .btn {
+  border:1px solid white;
+}
+
+textarea, input, button, .btn, .shopify-payment-button .shopify-payment-button__button--unbranded {
+  border-radius: 0 !important;
+}
+
+textarea, input, button { outline: none; }
+
+.underline_a a { border-bottom: 1px solid; }
+
+
+/********************************
+			HEADER
+*********************************/
+
+#shopify-section-header {
+  div[data-section-id="header"] {
+    display:none;
+  }
+  .header_large {
+    padding: 40px 15px 20px;
+    .header_mini {
+      display: flex;
+      .menu_left {
+        width: 300px;
+      }
+      .menu_center {
+        width: calc(100% - 600px);
+        text-align: center;
+        line-height: 81px;
+        .item_menu {
+          display: inline;
+          padding: 0 5px;
+        }
+      }
+      .menu_right {
+        width: 300px;
+      }
+    }
+  }
+}
+
+/********************************
+			MEDIA QUERIES
+*********************************/
+
+@media all and (max-width:767px) {
+  #shopify-section-header div[data-section-id="header"] {
+    display:block;
+  }
+  .header_large {
+    display:none;
+  }
+}
