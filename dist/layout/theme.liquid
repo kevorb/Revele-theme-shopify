@@ -33,6 +33,18 @@
 
   {% include 'social-meta-tags' %}
 
+  <style>
+  @font-face {
+    font-family: "Gobold_Bold";
+    src: url("{{ 'Gobold_Bold.otf' | asset_url }}");
+  }
+  @font-face {
+    font-family: "Gobold_Bold_Italic";
+    src: url("{{ 'Gobold_Bold_Italic.otf' | asset_url }}");
+  }
+  </style>
+
+  {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
   {{ 'custom.scss.css' | asset_url | stylesheet_tag }}
 

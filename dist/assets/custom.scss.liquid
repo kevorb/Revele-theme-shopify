@@ -5,15 +5,18 @@
 $black:#000;
 $white:#ffffff;
 
-/*******************************
-      FONT
-*******************************/
-/*
-@font-face {
-  font-family: "Gobold";
-  src: url("{{ '../assets/fonts/opensans.woff2' | asset_url }}") format("woff2")
-}
-*/
+/********************************
+			FONTS
+*********************************/
+
+@mixin gobold {font-family: "Gobold_Bold";}
+@mixin gobold_ita {font-family: "Gobold_Bold";}
+
+@mixin size_s { font-size: 12px; }
+@mixin size_m { font-size: 16px; }
+@mixin size_l { font-size: 22px; }
+
+
 /********************************
 			GENERAL
 *********************************/
@@ -41,6 +44,7 @@ textarea, input, button { outline: none; }
   }
   .header_large {
     padding: 40px 15px 20px;
+    @include gobold;
     .header_mini {
       display: flex;
       .menu_left {
@@ -52,11 +56,101 @@ textarea, input, button { outline: none; }
         line-height: 81px;
         .item_menu {
           display: inline;
+          color: $black;
+          @include size_l;
           padding: 0 5px;
         }
       }
       .menu_right {
         width: 300px;
+      }
+    }
+  }
+}
+
+/********************************
+      FOOTER
+********************************/
+
+footer {
+  background:$black;
+  color:$white;
+  padding: 30px;
+  .footer_top {
+    max-width: 45%;
+    img {
+      width: 100%;
+    }
+  }
+  .footer_bottom {
+    display: flex;
+    .footer_left {
+      text-align: left;
+      width: 50%;
+      display: flex;
+      .footer_menu {
+        width: 40%;
+        .footer_linklist {
+          .footer_linklist-item {
+            margin-top: 5px;
+            a {
+              color:$white;
+              @include gobold;
+              text-transform: uppercase;
+              @include size_s;
+            }
+          }
+        }
+      }
+    }
+    .footer_right {
+      text-align: right;
+      width: 50%;
+      .footer_newsletter {
+        width: 219px;
+        text-align: right;
+        margin-right: 0;
+        margin-left: auto;
+        .footer_subheading {
+          margin-bottom: 10px;
+          @include size_s;
+        }
+        #Email, button.newsletter__submit  {
+          min-height: 38px;
+          @include size_s;
+          background: $white;
+          color: $black;
+          @include gobold;
+          font-weight: 100;
+          padding: 0;
+        }
+        #Email {
+          width: 100px;
+          -ms-flex-preferred-size: inherit;
+          -webkit-flex-basis: inherit;
+          -moz-flex-basis: inherit;
+          flex-basis: inherit;
+          border: 1px solid $white;
+          border-right: 1px solid $black;
+          padding-left: 10px;
+        }
+        .form-message.form-message--success {
+          color:$black;
+          text-align: center;
+        }
+        button.newsletter__submit {
+          width: 90px;
+        }
+        p {
+          color:$white;
+          @include gobold;
+        }
+        .icon {
+          width: 42px;
+          margin-top: 25px;
+          height: 42px;
+          color:$white;
+        }
       }
     }
   }
