@@ -1,0 +1,95 @@
+<section class="container-fluid collection_new">
+  <div class="row collection_menu">
+    <div class="col-xs-12 text-center">
+      {% for link in linklists[section.settings.collection_menu].links %}
+        <a href="{{ link.url }}" class="collection_menu_item{% if link.active %} active{% endif %}">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% assign begin = 1 %}
+  {% if collection.handle == "all" %}
+  {% assign begin = 3 %}
+    <div class="collection_all">
+      <div class="row">
+        <div class="col-xs-12">
+          {% for product in collection.products %}
+            {% if forloop.index == 3 %}
+              {% break %}
+            {% else %}
+            <div class="col-xs-6 collection_product_grid_large">
+              <a href="{{ product.url | within: collection }}">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                  {% include 'product-grid-new' %}
+                </div>
+              </a>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="row col-xs-12 collection_container">
+        <div class="col-xs-6">
+          {% unless collection.metafields.global.link_all_1 == blank %}
+            <a href="{{ collection.metafields.global.link_all_1 }}">
+          {% endunless %}
+              <img src="{{ collection.metafields.global.image_all_1 }}" alt="revele">
+          {% unless collection.metafields.global.link_all_1 == blank %}
+            </a>
+          {% endunless %}
+        </div>
+        <div class="col-xs-6">
+          {% unless collection.metafields.global.link_all_2 == blank %}
+            <a href="{{ collection.metafields.global.link_all_2 }}">
+          {% endunless %}
+              <img src="{{ collection.metafields.global.image_all_2 }}" alt="revele">
+          {% unless collection.metafields.global.link_all_2 == blank %}
+            </a>
+          {% endunless %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <div class="row col-xs-12 collection_container">
+    <div class="col-xs-12 col-sm-6">
+      <div class="row_margin_top">
+      {% unless collection.metafields.global.link_1 == blank %}
+        <a href="{{ collection.metafields.global.link_1 }}">
+      {% endunless %}
+          <img src="{{ collection.metafields.global.image_1 }}" alt="revele">
+      {% unless collection.metafields.global.link_1 == blank %}
+        </a>
+      {% endunless %}
+    </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      {% for product in collection.products %}
+        {% assign limit = begin | plus: 4 %}
+        {% if forloop.index <= begin %}
+          {%- continue -%}
+        {% elsif forloop.index <= limit  %}
+          {% cycle '<div class="row">', '' %}
+          <div class="col-xs-6">
+            {% include 'product-grid-new' %}
+          </div>
+          {% cycle '', '</div>' %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+
+</section>
+{% schema %}
+{
+  "name": "Collection New Template",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "collection_menu",
+      "label": "Menu collection",
+      "info": "À configurer dans la partie Online Store > Navigation"
+    }
+  ]
+}
+{% endschema %}

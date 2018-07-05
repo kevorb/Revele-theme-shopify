@@ -4,25 +4,29 @@
 
 $black:#000;
 $white:#ffffff;
+$grey:grey;
 
 /********************************
 			FONTS
 *********************************/
 
 @mixin gobold {font-family: "Gobold_Bold";}
-@mixin gobold_ita {font-family: "Gobold_Bold";}
+@mixin gobold_ita {font-family: "Gobold_Bold_Italic";}
 
 @mixin size_s { font-size: 12px; }
 @mixin size_m { font-size: 16px; }
+@mixin size_ml { font-size: 20px; }
 @mixin size_l { font-size: 22px; }
+@mixin size_xxl { font-size: 32px; }
 
 
 /********************************
 			GENERAL
 *********************************/
 
-button, .btn {
-  border:1px solid white;
+a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
 }
 
 textarea, input, button, .btn, .shopify-payment-button .shopify-payment-button__button--unbranded {
@@ -30,8 +34,6 @@ textarea, input, button, .btn, .shopify-payment-button .shopify-payment-button__
 }
 
 textarea, input, button { outline: none; }
-
-.underline_a a { border-bottom: 1px solid; }
 
 
 /********************************
@@ -83,10 +85,9 @@ footer {
     }
   }
   .footer_bottom {
-    display: flex;
+    padding: 0 15px;
     .footer_left {
       text-align: left;
-      width: 50%;
       display: flex;
       .footer_menu {
         width: 40%;
@@ -105,7 +106,6 @@ footer {
     }
     .footer_right {
       text-align: right;
-      width: 50%;
       .footer_newsletter {
         width: 219px;
         text-align: right;
@@ -157,14 +157,68 @@ footer {
 }
 
 /********************************
+			COLLECTION PAGE
+*********************************/
+
+.collection_new {
+  .collection_menu {
+    padding: 0 0 50px;
+    .collection_menu_item {
+      padding:0 10px;
+      @include size_ml;
+      @include gobold_ita;
+      color: $grey;
+      &.active {
+        color:$black;
+      }
+    }
+  }
+  .collection_all {
+    .collection_product_grid_large {
+      .product_info {
+        padding-left: 10px;
+        padding-top: 10px;
+        @include gobold_ita;
+        @include size_xxl;
+        color:$black;
+        .product_price {
+          @include size_l;
+        }
+      }
+    }
+    .collection_meta {
+      margin-top: 50px;
+    }
+  }
+  .collection_container {
+    padding:0 20px;
+    margin-top: 20px;
+    .row {
+      margin-top: 20px;
+    }
+    .row_margin_top {
+      margin-top: 20px;
+    }
+    .product_info {
+      padding-top: 10px;
+      @include gobold_ita;
+      @include size_s;
+      color:$black;
+      .product_price {
+        display: block;
+      }
+    }
+  }
+}
+
+/********************************
 			MEDIA QUERIES
 *********************************/
 
 @media all and (max-width:767px) {
-  #shopify-section-header div[data-section-id="header"] {
-    display:block;
-  }
-  .header_large {
-    display:none;
-  }
+  #shopify-section-header div[data-section-id="header"] { display:block; }
+  .header_large { display:none; }
+  footer .footer_bottom .footer_right { margin-top: 50px; }
+  footer .footer_bottom .footer_right .footer_newsletter { margin: auto;}
+  footer .footer_bottom .footer_left .footer_menu { width: 50%; }
 }

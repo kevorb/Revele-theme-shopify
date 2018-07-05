@@ -2,8 +2,8 @@
   <div class="footer_top">
     <img src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
   </div>
-  <div class="footer_bottom">
-    <div class="footer_left footer_menu_container">
+  <div class="footer_bottom row">
+    <div class="footer_left footer_menu_container col-sm-6 col-xs-12">
       <div class="footer_menu">
         {% if linklists[section.settings.footer_linklist].links.size > 0 %}
           <ul class="footer_linklist">
@@ -27,7 +27,7 @@
         {% endif %}
       </div>
     </div>
-    <div class="footer_right">
+    <div class="footer_right col-sm-6 col-xs-12">
       <div class="footer_newsletter">
         {% form 'customer' %}
           {%- if form.errors -%}
