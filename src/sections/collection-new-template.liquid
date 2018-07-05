@@ -51,12 +51,12 @@
     </div>
   {% endif %}
   <div class="row col-xs-12 collection_container">
-    <div class="col-xs-12 col-sm-6">
-      <div class="row_margin_top">
+    <div class="heightOfParent col-xs-12 col-sm-6 collection_image_container">
+      <div class="heightOfParent row_margin_top">
       {% unless collection.metafields.global.link_1 == blank %}
-        <a href="{{ collection.metafields.global.link_1 }}">
+        <a class="heightOfParent" href="{{ collection.metafields.global.link_1 }}">
       {% endunless %}
-          <img src="{{ collection.metafields.global.image_1 }}" alt="revele">
+          <img class="heightOfParent img-cover" src="{{ collection.metafields.global.image_1 }}" alt="revele">
       {% unless collection.metafields.global.link_1 == blank %}
         </a>
       {% endunless %}
@@ -65,19 +65,50 @@
     <div class="col-xs-12 col-sm-6">
       {% for product in collection.products %}
         {% assign limit = begin | plus: 4 %}
-        {% if forloop.index <= begin %}
+        {% if forloop.index < begin %}
           {%- continue -%}
-        {% elsif forloop.index <= limit  %}
+        {% elsif forloop.index < limit  %}
           {% cycle '<div class="row">', '' %}
           <div class="col-xs-6">
             {% include 'product-grid-new' %}
           </div>
           {% cycle '', '</div>' %}
+        {% else %}
+          {% assign begin = limit %}
+          {%- break -%}
         {% endif %}
       {% endfor %}
     </div>
   </div>
-
+  {% if collection.products_count >= 5 %}
+    <div class="row col-xs-12 collection_container">
+      <div class="col-xs-12 col-sm-6">
+        {% for product in collection.products %}
+          {% assign limit = begin | plus: 4 %}
+          {% if forloop.index < begin %}
+            {%- continue -%}
+          {% elsif forloop.index < limit  %}
+            {% cycle '<div class="row">', '' %}
+            <div class="col-xs-6">
+              {% include 'product-grid-new' %}
+            </div>
+            {% cycle '', '</div>' %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="heightOfParent col-xs-12 col-sm-6">
+        <div class="heightOfParent row_margin_top collection_image_container">
+        {% unless collection.metafields.global.link_2 == blank %}
+          <a class="heightOfParent" href="{{ collection.metafields.global.link_2 }}">
+        {% endunless %}
+            <img class="heightOfParent img-cover" src="{{ collection.metafields.global.image_2 }}" alt="revele">
+        {% unless collection.metafields.global.link_2 == blank %}
+          </a>
+        {% endunless %}
+      </div>
+      </div>
+    </div>
+  {% endif %}
 
 </section>
 {% schema %}

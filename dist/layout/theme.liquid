@@ -89,6 +89,9 @@
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
   {{ content_for_header }}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="template-{{ template | split: '.' | first }}">
@@ -124,6 +127,8 @@
     </main>
 
     {% section 'footer' %}
+
+    <script src="{{ 'custom.js' | asset_url }}"></script>
 
   </div>
 </body>

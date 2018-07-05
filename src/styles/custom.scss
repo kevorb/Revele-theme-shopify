@@ -13,7 +13,9 @@ $grey:grey;
 @mixin gobold {font-family: "Gobold_Bold";}
 @mixin gobold_ita {font-family: "Gobold_Bold_Italic";}
 
-@mixin size_s { font-size: 12px; }
+@mixin size_xxs { font-size: 8px; }
+@mixin size_xs { font-size: 10px; }
+@mixin size_s { font-size: 14px; }
 @mixin size_m { font-size: 16px; }
 @mixin size_ml { font-size: 20px; }
 @mixin size_l { font-size: 22px; }
@@ -34,6 +36,10 @@ textarea, input, button, .btn, .shopify-payment-button .shopify-payment-button__
 }
 
 textarea, input, button { outline: none; }
+
+.img-cover { object-fit: cover; }
+
+.heightOfParent { overflow: hidden;}
 
 
 /********************************
@@ -78,6 +84,7 @@ footer {
   background:$black;
   color:$white;
   padding: 30px;
+  margin-top: 30px;
   .footer_top {
     max-width: 45%;
     img {
@@ -107,7 +114,7 @@ footer {
     .footer_right {
       text-align: right;
       .footer_newsletter {
-        width: 219px;
+        width: 255px;
         text-align: right;
         margin-right: 0;
         margin-left: auto;
@@ -139,7 +146,7 @@ footer {
           text-align: center;
         }
         button.newsletter__submit {
-          width: 90px;
+          width: 100px;
         }
         p {
           color:$white;
@@ -221,4 +228,11 @@ footer {
   footer .footer_bottom .footer_right { margin-top: 50px; }
   footer .footer_bottom .footer_right .footer_newsletter { margin: auto;}
   footer .footer_bottom .footer_left .footer_menu { width: 50%; }
+  .collection_new .collection_menu .collection_menu_item { @include size_s;padding:0 5px; }
+  .collection_new .collection_all .collection_product_grid_large .product_info { padding-left: 0; @include size_xs;
+    .product_price { @include size_xxs; }
+  }
+  .collection_new .collection_container { width: auto !important;
+    .product_info { @include size_xs }
+  }
 }
