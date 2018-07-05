@@ -29,6 +29,8 @@ $grey:grey;
 			GENERAL
 *********************************/
 
+$header_icon_size:25px;
+
 h1, h2, h3, h4, h5  {
   color:$black;
   line-height: inherit;
@@ -97,6 +99,16 @@ textarea, input, button { outline: none; }
       }
       .menu_right {
         width: 300px;
+        text-align: right;
+        line-height: 81px;
+        a {
+          color:$black;
+          svg {
+            height: $header_icon_size;
+            width: $header_icon_size;
+            margin-left: 10px;
+          }
+        }
       }
     }
   }
@@ -298,10 +310,19 @@ footer {
   #shopify-section-header div[data-section-id="header"] { display:block; }
   .header_large { display:none; }
 
+
   /* footer */
   footer .footer_bottom .footer_right { margin-top: 50px; }
   footer .footer_bottom .footer_right .footer_newsletter { margin: auto;}
   footer .footer_bottom .footer_left .footer_menu { width: 50%; }
+  header .site-header__icons-wrapper {
+    a, .btn--link { color: $black; }
+    .btn--link.site-header__icon.site-header__menu {
+      position: relative;
+      bottom:4px;
+      color:$black;
+    }
+  }
 
   /* collection */
   .collection_new .collection_menu .collection_menu_item { @include size_s;padding:0 5px; }

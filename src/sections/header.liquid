@@ -301,7 +301,27 @@
       </ul>
     </div>
     <div class="menu menu_right">
-
+      <a href="/cart" class="">
+        {% include 'icon-cart' %}
+        {% if cart.item_count > 0 %}
+          <div id="CartCount" class="site-header__cart-count">
+            <span>{{ cart.item_count }}</span>
+            <span class="">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+          </div>
+        {% endif %}
+        {% include 'icon-search' %}
+        {% if shop.customer_accounts_enabled %}
+          {% if customer %}
+            <a href="/account" class="">
+              {% include 'icon-login' %}
+            </a>
+          {% else %}
+            <a href="/account/login" class="">
+              {% include 'icon-login' %}
+            </a>
+          {% endif %}
+        {% endif %}
+      </a>
     </div>
   </div>
 </div>
