@@ -16,15 +16,39 @@ $grey:grey;
 @mixin size_xxs { font-size: 8px; }
 @mixin size_xs { font-size: 10px; }
 @mixin size_s { font-size: 14px; }
-@mixin size_m { font-size: 16px; }
+@mixin size_m { font-size: 15px; }
 @mixin size_ml { font-size: 20px; }
-@mixin size_l { font-size: 22px; }
-@mixin size_xxl { font-size: 32px; }
+@mixin size_mxl { font-size: 22px; }
+@mixin size_l { font-size: 26px; }
+@mixin size_xl { font-size: 32px; }
+@mixin size_xxl { font-size: 42px; }
+@mixin size_xxxl { font-size: 70px; }
 
 
 /********************************
 			GENERAL
 *********************************/
+
+h1, h2, h3, h4, h5  {
+  color:$black;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+}
+
+h1 { @include size_xxxl;@include gobold_ita; }
+h2 { @include size_xxl;@include gobold_ita; }
+h3 { @include size_xl;@include gobold_ita; }
+h4 { @include size_xl;@include gobold; }
+h5 { @include size_m;@include gobold; }
+
+@media all and (max-width:767px) {
+  h1 { @include size_xl; }
+  h2 { @include size_l; }
+  h3 { @include size_ml; }
+  h4 { @include size_ml; }
+  h5 { @include size_s; }
+}
 
 a:hover, a:focus {
     color: inherit;
@@ -36,6 +60,8 @@ textarea, input, button, .btn, .shopify-payment-button .shopify-payment-button__
 }
 
 textarea, input, button { outline: none; }
+
+.relative { position:relative; }
 
 .img-cover { object-fit: cover; }
 
@@ -65,7 +91,7 @@ textarea, input, button { outline: none; }
         .item_menu {
           display: inline;
           color: $black;
-          @include size_l;
+          @include size_mxl;
           padding: 0 5px;
         }
       }
@@ -163,6 +189,51 @@ footer {
   }
 }
 
+
+/********************************
+			FOOTER NEWSLETTER
+*********************************/
+
+.section_footer_newsletter {
+  padding:100px 0 50px;
+  text-align: center;
+  h3 {
+    left: -140px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  h4 {
+    left: -5px;
+    letter-spacing: 18px;
+    margin-bottom: 30px;
+    span.exclam {
+      left: 30px;
+      top: 12px;
+    }
+  }
+  h5 { margin-top: 12px; }
+  #contact_form {
+    max-width: 280px;
+    margin: auto;
+    #Email {
+      width: 190px;
+      -ms-flex-preferred-size: inherit;
+      -webkit-flex-basis: inherit;
+      -moz-flex-basis: inherit;
+      flex-basis: inherit;
+      @include size_s;
+    }
+    .input-group__btn {
+      width:90px;
+      #Subscribe {
+        padding: 0;
+        background: black;
+        @include gobold;
+      }
+    }
+  }
+}
+
 /********************************
 			COLLECTION PAGE
 *********************************/
@@ -186,10 +257,10 @@ footer {
         padding-left: 10px;
         padding-top: 10px;
         @include gobold_ita;
-        @include size_xxl;
+        @include size_xl;
         color:$black;
         .product_price {
-          @include size_l;
+          @include size_mxl;
         }
       }
     }
@@ -223,11 +294,16 @@ footer {
 *********************************/
 
 @media all and (max-width:767px) {
+  /* header */
   #shopify-section-header div[data-section-id="header"] { display:block; }
   .header_large { display:none; }
+
+  /* footer */
   footer .footer_bottom .footer_right { margin-top: 50px; }
   footer .footer_bottom .footer_right .footer_newsletter { margin: auto;}
   footer .footer_bottom .footer_left .footer_menu { width: 50%; }
+
+  /* collection */
   .collection_new .collection_menu .collection_menu_item { @include size_s;padding:0 5px; }
   .collection_new .collection_all .collection_product_grid_large .product_info { padding-left: 0; @include size_xs;
     .product_price { @include size_xxs; }
@@ -235,4 +311,26 @@ footer {
   .collection_new .collection_container { width: auto !important;
     .product_info { @include size_xs }
   }
+
+  /* footer newsletter */
+  .section_footer_newsletter {
+    padding:60px 0 30px;
+    h3 { left: -90px; margin-bottom: 4px; }
+    h4 {
+      letter-spacing: 12px;
+      margin-bottom: 20px;
+      span.exclam {
+        left: 16px;
+        top: 7px;
+      }
+    }
+    h5 { margin-top: 5px;}
+    #contact_form {
+      max-width: 270px;
+      #Email { width: 180px; }
+    }
+  }
+
+  /*     */
+
 }
