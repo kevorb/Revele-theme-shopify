@@ -302,6 +302,22 @@ footer {
 }
 
 /********************************
+			PRODUCT PAGE
+*********************************/
+
+.product_page {
+  .container-fluid {
+    padding-left: 35px;
+    padding-right: 35px;
+    .product_details {
+      h1 {
+        @include size_xl;
+      }
+    }
+  }
+}
+
+/********************************
 			MEDIA QUERIES
 *********************************/
 
