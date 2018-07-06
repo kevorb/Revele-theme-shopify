@@ -70,7 +70,9 @@
         {% elsif forloop.index < limit  %}
           {% cycle '<div class="row">', '' %}
           <div class="col-xs-6">
-            {% include 'product-grid-new' %}
+            <a href="{{ product.url | within: collection }}">
+              {% include 'product-grid-new' %}
+            </a>
           </div>
           {% cycle '', '</div>' %}
         {% else %}
@@ -90,7 +92,9 @@
           {% elsif forloop.index < limit  %}
             {% cycle '<div class="row">', '' %}
             <div class="col-xs-6">
-              {% include 'product-grid-new' %}
+              <a href="{{ product.url | within: collection }}">
+                {% include 'product-grid-new' %}
+              </a>
             </div>
             {% cycle '', '</div>' %}
           {% endif %}
