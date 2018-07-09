@@ -42,7 +42,18 @@
 </div>
 {% else %}
 <div class="swatch clearfix" data-option-index="{{ option_index }}">
+  {% assign swatch_downcase = swatch | downcase %}
+  {% if swatch_downcase == "size" %}
+  <div class="header">
+    <h4>choose your size</h4>
+    <h5>
+      To find your perfect size, be sure to check our sizing chart<br>
+      Don’t hesitate to contact us if you have any questions about your size !
+    </h5>
+  </div>
+  {% else %}
   <div class="header">{{ swatch }}</div>
+  {% endif %}
   {% assign values = '' %}
   {% for variant in product.variants %}
     {% assign value = variant.options[option_index] %}

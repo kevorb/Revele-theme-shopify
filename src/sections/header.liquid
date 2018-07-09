@@ -309,7 +309,9 @@
             <span class="">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
           </div>
         {% endif %}
+        {% comment %}
         {% include 'icon-search' %}
+        {% endcomment %}
         {% if shop.customer_accounts_enabled %}
           {% if customer %}
             <a href="/account" class="">

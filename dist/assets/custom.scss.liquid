@@ -69,12 +69,17 @@ textarea, input, button { outline: none; }
 
 .heightOfParent { overflow: hidden;}
 
+.little-margin-top { margin-top: 30px; }
+
 
 /********************************
 			HEADER
 *********************************/
 
 #shopify-section-header {
+  #CartCount {
+    display: none;
+  }
   div[data-section-id="header"] {
     display:none;
   }
@@ -103,9 +108,10 @@ textarea, input, button { outline: none; }
         line-height: 81px;
         a {
           color:$black;
-          svg {
+          svg, .fa, .fas, .far {
             height: $header_icon_size;
             width: $header_icon_size;
+            font-size: $header_icon_size;
             margin-left: 10px;
           }
         }
@@ -125,8 +131,11 @@ footer {
   margin-top: 30px;
   .footer_top {
     max-width: 45%;
+    padding-bottom: 85px;
     img {
       width: 100%;
+      max-width: 640px;
+      min-width: 230px;
     }
   }
   .footer_bottom {
@@ -312,9 +321,10 @@ footer {
     .product_details {
       h1 {
         @include size_xl;
+        text-transform: uppercase;
       }
       h2 {
-        @include size_ml;
+        @include size_l;
         margin-top: 20px;
         span {
           color: $black;
@@ -322,13 +332,32 @@ footer {
         }
       }
       .product-form {
+        #AddToCart-product-new-template {
+          background: $black;
+          color: $white;
+          @include gobold;
+          text-transform: uppercase;
+          font-weight: 100;
+          @include size_m;
+          width: 90%;
+          margin:auto;
+        }
         .selector-wrapper.js.product-form__item {
           display: none;
+        }
+        .swatch {
+          .header {
+            text-align: center;
+            margin-top: 30px;
+            h4 { @include size_l; }
+            h5 { color:$grey; }
+          }
         }
         .swatch.clearfix {
           width: 100%;
           .swatch-element {
             margin:0;
+            min-width: 20%;
             &.selected {
               label {
                 background: $black;
@@ -337,6 +366,11 @@ footer {
               }
             }
             label {
+              width: 100%;
+              height: auto !important;
+              padding:8px 0;
+              margin: 25px 0;
+              @include size_m;
               border-radius: 0;
               box-shadow: none;
               background: $white;
@@ -349,18 +383,19 @@ footer {
   }
   .product_metafields {
     .product_metafield {
-  	h3 {
+  	h4 {
        text-transform:uppercase;
+       text-align: center;
         font-weight:900;
+        @include size_l;
         cursor:pointer;
-        font-size:16px;
-        border-bottom:1px solid;
-        padding:8px 0;
+        border-top:1px solid;
+        padding:30px 0;
         margin:0;
         span {
           transition:.2s;
           display:block;
-          float:left;
+          float:right;
           margin-right:10px;
           &.rotate {
             -webkit-transform: rotate(135deg);     /* Chrome and other webkit browsers */
@@ -377,11 +412,13 @@ footer {
       p {
         display:none;
         padding: 5px 0;
-        margin-bottom:10px;
+        margin-top: 10px;
+        color: $black;
+        margin-bottom:35px;
       }
       &:first-child {
-        h3 {
-          border-top:1px solid;
+        h4 {
+          border-top:0;
         }
       }
     }
