@@ -122,7 +122,59 @@
           ></p>
 
           <div class="product-single__description rte">
-            {{ product.description }}
+            <div class="product_picto row">
+
+
+              {% if product.metafields.picto.image_6 == blank %}
+              <div class="col-xs-3 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_1 }}" alt="{{ product.metafields.picto.description_1 }}">
+                <h6>{{ product.metafields.picto.description_1 }}</h6>
+              </div>
+              <div class="col-xs-3 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_2 }}" alt="{{ product.metafields.picto.description_2 }}">
+                <h6>{{ product.metafields.picto.description_2 }}</h6>
+              </div>
+              <div class="col-xs-3 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_3 }}" alt="{{ product.metafields.picto.description_3 }}">
+                <h6>{{ product.metafields.picto.description_3 }}</h6>
+              </div>
+              <div class="col-xs-3 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_4 }}" alt="{{ product.metafields.picto.description_4 }}">
+                <h6>{{ product.metafields.picto.description_4 }}</h6>
+              </div>
+              {% endif %}
+              {% unless product.metafields.picto.image_6 == blank %}
+              <div class="col-xs-4 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_1 }}" alt="{{ product.metafields.picto.description_1 }}">
+                <h6>{{ product.metafields.picto.description_1 }}</h6>
+              </div>
+              <div class="col-xs-4 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_2 }}" alt="{{ product.metafields.picto.description_2 }}">
+                <h6>{{ product.metafields.picto.description_2 }}</h6>
+              </div>
+              <div class="col-xs-4 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_3 }}" alt="{{ product.metafields.picto.description_3 }}">
+                <h6>{{ product.metafields.picto.description_3 }}</h6>
+              </div>
+              <div class="col-xs-4 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_4 }}" alt="{{ product.metafields.picto.description_4 }}">
+                <h6>{{ product.metafields.picto.description_4 }}</h6>
+              </div>
+              <div class="col-xs-4 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_5 }}" alt="{{ product.metafields.picto.description_5 }}">
+                <h6>{{ product.metafields.picto.description_5 }}</h6>
+              </div>
+              <div class="col-xs-4 product-metafields-pictos">
+                <img src="{{ product.metafields.picto.image_6 }}" alt="{{ product.metafields.picto.description_6 }}">
+                <h6>{{ product.metafields.picto.description_6 }}</h6>
+              </div>
+              {% endunless %}
+
+            </div>
+
+            <div class="real_description">
+              {{ product.description }}
+            </div>
 
             {% include 'product-details-metafield' %}
 

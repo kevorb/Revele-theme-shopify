@@ -12,13 +12,14 @@ $grey:grey;
 
 @mixin gobold {font-family: "Gobold_Bold";}
 @mixin gobold_ita {font-family: "Gobold_Bold_Italic";}
+@mixin titi {font-family: "TitilliumWeb";}
 
 @mixin size_xxs { font-size: 8px; }
 @mixin size_xs { font-size: 10px; }
 @mixin size_s { font-size: 14px; }
-@mixin size_m { font-size: 15px; }
+@mixin size_m { font-size: 16px; }
 @mixin size_ml { font-size: 20px; }
-@mixin size_mxl { font-size: 22px; }
+@mixin size_mxl { font-size: 24px; }
 @mixin size_l { font-size: 26px; }
 @mixin size_xl { font-size: 32px; }
 @mixin size_xxl { font-size: 42px; }
@@ -52,6 +53,8 @@ h5 { @include size_m;@include gobold; }
   h5 { @include size_s; }
 }
 
+p {@include titi;color:$black;}
+
 a:hover, a:focus {
     color: inherit;
     text-decoration: none;
@@ -84,7 +87,7 @@ textarea, input, button { outline: none; }
     display:none;
   }
   .header_large {
-    padding: 40px 15px 20px;
+    padding: 40px 30px 20px;
     @include gobold;
     .header_mini {
       display: flex;
@@ -94,18 +97,19 @@ textarea, input, button { outline: none; }
       .menu_center {
         width: calc(100% - 600px);
         text-align: center;
-        line-height: 81px;
+        line-height: 65px;
         .item_menu {
           display: inline;
           color: $black;
           @include size_mxl;
-          padding: 0 5px;
+          padding: 0 32px;
+          &:hover { color:$grey; }
         }
       }
       .menu_right {
         width: 300px;
         text-align: right;
-        line-height: 81px;
+        line-height: 65px;
         a {
           color:$black;
           svg, .fa, .fas, .far {
@@ -134,7 +138,7 @@ footer {
     padding-bottom: 85px;
     img {
       width: 100%;
-      max-width: 640px;
+      max-width: 420px;
       min-width: 230px;
     }
   }
@@ -152,7 +156,7 @@ footer {
               color:$white;
               @include gobold;
               text-transform: uppercase;
-              @include size_s;
+              @include size_m;
             }
           }
         }
@@ -161,17 +165,17 @@ footer {
     .footer_right {
       text-align: right;
       .footer_newsletter {
-        width: 255px;
+        width: 290px;
         text-align: right;
         margin-right: 0;
         margin-left: auto;
         .footer_subheading {
           margin-bottom: 10px;
-          @include size_s;
+          @include size_m;
         }
         #Email, button.newsletter__submit  {
           min-height: 38px;
-          @include size_s;
+          @include size_m;
           background: $white;
           color: $black;
           @include gobold;
@@ -224,11 +228,12 @@ footer {
     margin-bottom: 10px;
   }
   h4 {
-    left: -5px;
+    left: 0;
     letter-spacing: 18px;
     margin-bottom: 30px;
     span.exclam {
       left: 30px;
+      display:none;
       top: 12px;
     }
   }
@@ -292,6 +297,24 @@ footer {
   .collection_container {
     padding:0 20px;
     margin-top: 20px;
+    .collection_product_card {
+      &:nth-child(4n+1) {
+        padding-right: 25px;
+        padding-bottom: 15px;
+      }
+      &:nth-child(4n+2) {
+        padding-left: 25px;
+        padding-bottom: 15px;
+      }
+      &:nth-child(4n+3) {
+        padding-right: 25px;
+        padding-top: 15px;
+      }
+      &:nth-child(4n+4) {
+        padding-left: 25px;
+        padding-top: 15px;
+      }
+    }
     .row {
       margin-top: 20px;
     }
@@ -375,6 +398,26 @@ footer {
               box-shadow: none;
               background: $white;
               border: 1px solid $grey;
+            }
+          }
+        }
+      }
+      .product-single__description {
+        color: $black;
+        .real_description {
+          margin-top: 30px;
+          p span { display: block; overflow: hidden; }
+        }
+        .product_picto {
+          margin-top: 20px;
+          .product-metafields-pictos {
+            text-align: center;
+            img {
+              max-width: 75px;
+            }
+            h6 {
+              margin: 0;
+              text-align: center;
             }
           }
         }
@@ -476,6 +519,16 @@ footer {
     }
   }
 
-  /*     */
+}
+/* little fix - TODO decalage page shpo   */
 
+.container-fluid {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media all and (min-width: 750px) {
+  .main-content {
+      padding-top: 15px;
+  }
 }

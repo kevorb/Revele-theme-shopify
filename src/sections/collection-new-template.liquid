@@ -28,7 +28,7 @@
           {% endfor %}
         </div>
       </div>
-      <div class="row col-xs-12 collection_container">
+      <div class="col-xs-12 collection_container">
         <div class="col-xs-6">
           {% unless collection.metafields.global.link_all_1 == blank %}
             <a href="{{ collection.metafields.global.link_all_1 }}">
@@ -50,7 +50,10 @@
       </div>
     </div>
   {% endif %}
-  <div class="row col-xs-12 collection_container">
+
+
+
+  <div class="col-xs-12 collection_container">
     <div class="heightOfParent col-xs-12 col-sm-6 collection_image_container">
       <div class="heightOfParent row_margin_top">
       {% unless collection.metafields.global.link_1 == blank %}
@@ -62,14 +65,14 @@
       {% endunless %}
     </div>
     </div>
-    <div class="col-xs-12 col-sm-6">
+    <div class="thisHeight col-xs-12 col-sm-6">
       {% for product in collection.products %}
         {% assign limit = begin | plus: 4 %}
         {% if forloop.index < begin %}
           {%- continue -%}
         {% elsif forloop.index < limit  %}
           {% cycle '<div class="row">', '' %}
-          <div class="col-xs-6">
+          <div class="col-xs-6 collection_product_card">
             <a href="{{ product.url | within: collection }}">
               {% include 'product-grid-new' %}
             </a>
@@ -82,9 +85,12 @@
       {% endfor %}
     </div>
   </div>
+
+
+
   {% if collection.products_count >= 5 %}
-    <div class="row col-xs-12 collection_container">
-      <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 collection_container">
+      <div class="thisHeight col-xs-12 col-sm-6">
         {% for product in collection.products %}
           {% assign limit = begin | plus: 4 %}
           {% if forloop.index < begin %}
