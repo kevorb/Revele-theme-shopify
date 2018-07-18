@@ -550,6 +550,28 @@ footer {
 }
 
 /********************************
+			SIDE CART
+*********************************/
+
+.cart-side {
+  position: fixed;
+  z-index: 999;
+  top:0;
+  bottom: 0;
+  padding: 50px;
+  background: $white;
+  border-left:3px solid $black;
+  border-right:3px solid $black;
+  width:500px;
+  right: -510px;
+  transition:.5s;
+  &.open {
+    right:0;
+  }
+}
+
+
+/********************************
 			MEDIA QUERIES
 *********************************/
 
