@@ -3,7 +3,7 @@
     <img src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
   </div>
   <div class="footer_bottom row">
-    <div class="footer_left footer_menu_container col-sm-6 col-xs-12">
+    <div class="footer_left footer_menu_container col-sm-8 col-xs-12">
       <div class="footer_menu">
         {% if linklists[section.settings.footer_linklist].links.size > 0 %}
           <ul class="footer_linklist">
@@ -26,8 +26,19 @@
           </ul>
         {% endif %}
       </div>
+      <div class="footer_menu footer_menu_big">
+        {% if linklists[section.settings.footer_linklist_three].links.size > 0 %}
+          <ul class="footer_linklist">
+            {% for link in linklists[section.settings.footer_linklist_three].links %}
+              <li class="footer_linklist-item little-margin-top">
+                <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
     </div>
-    <div class="footer_right col-sm-6 col-xs-12">
+    <div class="footer_right col-sm-4 col-xs-12">
       <div class="footer_newsletter">
         {% form 'customer' %}
           {%- if form.errors -%}
@@ -142,6 +153,21 @@
       {
         "type": "link_list",
         "id": "footer_linklist_two",
+        "label": {
+          "en": "Additional menu",
+          "de": "Extra Menü",
+          "fr": "Menu supplémentaire"
+        },
+        "default": "main-menu",
+        "info": {
+          "en": "This menu won't show dropdown items",
+          "de": "Dieses Menü zeigt keine Dropdowns an",
+          "fr": "Ce menu n'affichera pas les éléments des menus déroulants"
+        }
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist_three",
         "label": {
           "en": "Additional menu",
           "de": "Extra Menü",

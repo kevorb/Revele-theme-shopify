@@ -1,0 +1,7 @@
+<div class="relative">
+  <img src="{{ product.featured_image.src | product_img_url: 'original' }}" alt="{{ product.featured_image.alt }}">
+  <span class="product_price absolute absolute_cta cta">{{ product.price | money_without_trailing_zeros }}</span>
+</div>
+<div class="product_info">
+  {{ product.title }}
+</div>

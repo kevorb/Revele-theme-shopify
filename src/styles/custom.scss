@@ -5,6 +5,10 @@
 $black:#000;
 $white:#ffffff;
 $grey:grey;
+$red:#e03332;
+
+$specialBlue:#8cd7f8;
+$specialRed:#ed2b4a;
 
 /********************************
 			FONTS
@@ -67,12 +71,26 @@ textarea, input, button, .btn, .shopify-payment-button .shopify-payment-button__
 textarea, input, button { outline: none; }
 
 .relative { position:relative; }
+.absolute { position: absolute; }
+
+.flex { display:flex;}
 
 .img-cover { object-fit: cover; }
 
 .heightOfParent { overflow: hidden;}
 
 .little-margin-top { margin-top: 30px; }
+
+.display_none { display:none; }
+
+.cta {
+  @include size_xl;
+  background: $white;
+  color: black;
+  @include gobold_ita;
+  border: 2px solid black;
+  padding: 3px 12px 3px 8px;
+}
 
 
 /********************************
@@ -148,7 +166,8 @@ footer {
       text-align: left;
       display: flex;
       .footer_menu {
-        width: 40%;
+        width: 30%;
+        padding-right: 30px;
         .footer_linklist {
           .footer_linklist-item {
             margin-top: 5px;
@@ -159,6 +178,12 @@ footer {
               @include size_m;
             }
           }
+        }
+      }
+      .footer_menu_big {
+        width: 40%;
+        .little-margin-top:not(:first-of-type) {
+          margin-top:15px !important;
         }
       }
     }
@@ -278,6 +303,19 @@ footer {
     }
   }
   .collection_all {
+    .collection_first_absolute {
+      right: 20px;
+      top:25%;
+      text-align: center;
+      h4 {
+        color:$white;
+        @include size_xxl;
+      }
+    }
+    .collection_second_absolute {
+      right: 20px;
+      top:45%;
+    }
     .collection_product_grid_large {
       .product_info {
         padding-left: 10px;
@@ -465,6 +503,49 @@ footer {
         }
       }
     }
+  }
+  .product-special-swatch {
+    margin-bottom: 30px;
+    margin-top: -10px;
+    .red { color:$red; }
+    .product-special-swatch-revelia {
+      margin-bottom: 30px;
+      margin-top: 15px;
+      cursor: pointer;
+      &.active { border:3px solid $black;}
+    }
+    .product-special-swatch-color {
+      height:30px;
+      width: 30px;
+      border-radius: 100%;
+      cursor: pointer;
+      &.colorRed {
+        background: $specialRed;
+        margin-left: 30px;
+      }
+      &.colorBlue {
+        background: $specialBlue;
+      }
+    }
+  }
+}
+/********************************
+    RELATED PRODUCT
+*********************************/
+
+.related_product {
+  margin-bottom: 30px;
+  margin-top: 80px;
+  .absolute_cta {
+    bottom: 10px;
+    right:10px;
+    @include size_ml;
+  }
+  .product_info {
+    @include size_m;
+    @include gobold_ita;
+    color: black;
+    margin-top:10px;
   }
 }
 

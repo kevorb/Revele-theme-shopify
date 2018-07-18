@@ -30,22 +30,33 @@
       </div>
       <div class="col-xs-12 collection_container">
         <div class="col-xs-6">
-          {% unless collection.metafields.global.link_all_1 == blank %}
-            <a href="{{ collection.metafields.global.link_all_1 }}">
-          {% endunless %}
-              <img src="{{ collection.metafields.global.image_all_1 }}" alt="revele">
-          {% unless collection.metafields.global.link_all_1 == blank %}
-            </a>
-          {% endunless %}
+          <div class="relative">
+            {% unless collection.metafields.global.link_all_1 == blank %}
+              <a href="{{ collection.metafields.global.link_all_1 }}">
+            {% endunless %}
+                <img src="{{ collection.metafields.global.image_all_1 }}" alt="revele">
+                <div class="absolute collection_first_absolute">
+                  <h4>{{ collection.metafields.global.title_all_1 }}</h4>
+                  <button class="cta">{{ collection.metafields.global.cta_all_1 }}</button>
+                </div>
+            {% unless collection.metafields.global.link_all_1 == blank %}
+              </a>
+            {% endunless %}
+          </div>
         </div>
         <div class="col-xs-6">
-          {% unless collection.metafields.global.link_all_2 == blank %}
-            <a href="{{ collection.metafields.global.link_all_2 }}">
-          {% endunless %}
-              <img src="{{ collection.metafields.global.image_all_2 }}" alt="revele">
-          {% unless collection.metafields.global.link_all_2 == blank %}
-            </a>
-          {% endunless %}
+          <div class="relative">
+            {% unless collection.metafields.global.link_all_2 == blank %}
+              <a href="{{ collection.metafields.global.link_all_2 }}">
+            {% endunless %}
+                <img src="{{ collection.metafields.global.image_all_2 }}" alt="revele">
+                <div class="absolute collection_second_absolute">
+                  <button class="cta">{{ collection.metafields.global.cta_all_2 }}</button>
+                </div>
+            {% unless collection.metafields.global.link_all_2 == blank %}
+              </a>
+            {% endunless %}
+          </div>
         </div>
       </div>
     </div>

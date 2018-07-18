@@ -93,6 +93,74 @@
                 {% endfor %}
               {% endif %}
 
+
+
+              {% comment %}
+                DEBUT :
+                Gestion des cas particuliers de produits qui sont
+                en plusieurs variants
+              {% endcomment %}
+              {% if product.title == "Compression Leggings - Blue"%}
+              <div class="swatch clearfix product-special-swatch">
+                <div class="header">
+                  <h4>COLOR : BLUE</h4>
+                  <div class="flex">
+                    <div class="product-special-swatch-color colorBlue"></div>
+                    <a href="/collections/all/products/compression-leggings-red"><div class="product-special-swatch-color colorRed"></div></a>
+                  </div>
+                </div>
+              </div>
+              {% elsif product.title == "Compression Leggings - Red"%}
+              <div class="swatch clearfix product-special-swatch">
+                <div class="header">
+                  <h4>COLOR : RED</h4>
+                  <div class="flex">
+                    <a href="/collections/all/products/compression-leggings"><div class="product-special-swatch-color colorBlue"></div></a>
+                    <div class="product-special-swatch-color colorRed"></div>
+                  </div>
+                </div>
+              </div>
+              {% elsif product.title == "The Revelia, chest protection with shoulder pads"%}
+              <div class="swatch clearfix product-special-swatch">
+                <div class="header">
+                  <h4>WITH OR W/O : <span class="red">WITH SHOULDER PADS</span></h4>
+                  <div class="flex">
+                    <div class="product-special-swatch-revelia active">
+                      <img src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-avec-epaules-icon.png?13440809533093614531" alt="with shoulder pads">
+                    </div>
+                    <a href="/collections/all/products/the-revelia-chest-protection-w-o-shoulder-pads">
+                      <div class="product-special-swatch-revelia">
+                        <img src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-sans-epaules-icon.png?13440809533093614531" alt="without shoulder pads">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {% elsif product.title == "The Revelia, chest protection w/o shoulder pads"%}
+              <div class="swatch clearfix product-special-swatch">
+                <div class="header">
+                  <h4>WITH OR W/O : <span class="red">W/O SHOULDER PADS</span></h4>
+                  <div class="flex">
+                    <a href="/collections/all/products/the-revelia-chest-protection-with-shoulder-pads">
+                      <div class="product-special-swatch-revelia">
+                        <img src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-avec-epaules-icon.png?13440809533093614531" alt="with shoulder pads">
+                      </div>
+                    </a>
+                    <div class="product-special-swatch-revelia active">
+                      <img src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-sans-epaules-icon.png?13440809533093614531" alt="without shoulder pads">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% comment %}
+                FIN :
+                Gestion des cas particuliers de produits qui sont
+                en plusieurs variants
+              {% endcomment %}
+
+
+
               {% if section.settings.show_quantity_selector %}
                 <div class="product-form__item product-form__item--quantity">
                   <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
@@ -177,6 +245,12 @@
             </div>
 
             {% include 'product-details-metafield' %}
+
+            <div class="display_none">
+              {% for tag in product.tags %}
+                <span data-attribute="{{ tag }}" class="mots_clefs">{{ tag }}</span>
+              {% endfor %}
+            </div>
 
           </div>
         </div>
