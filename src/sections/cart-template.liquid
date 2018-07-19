@@ -1,4 +1,4 @@
-<div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template">
+<div class="page-width cart-new-template" data-section-id="{{ section.id }}" data-section-type="cart-template">
 
   {% if cart.item_count > 0 %}
     <div class="section-header text-center">
@@ -18,7 +18,7 @@
             <tr class="cart__row border-bottom line{{ forloop.index }} cart-flex{% if forloop.first %} border-top{% endif %}">
               <td class="cart__image-wrapper cart-flex-item">
                 <a href="{{ item.url | within: collections.all }}">
-                  <img class="cart__image" src="{{ item | img_url: '95x95', scale: 2 }}" alt="{{ item.title | escape }}">
+                  <img class="cart__image" src="{{ item | img_url: 'large' }}" alt="{{ item.title | escape }}">
                 </a>
               </td>
               <td class="cart__meta small--text-left cart-flex-item">
