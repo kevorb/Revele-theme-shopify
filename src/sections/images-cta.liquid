@@ -1,0 +1,41 @@
+<section class="images-cta">
+  <div class="row">
+    {% for block in section.blocks %}
+    <div class="col-xs-12 col-md-4 container-image-full relative">
+      <a href="{{ block.settings.link }}">
+        <img src="{{ block.settings.image | img_url : 'master' }}" alt="{{ block.settings.image.alt }}">
+        <button class="cta absolute">{{ block.settings.cta }}</button>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Images with CTA",
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "image-with-cta",
+      "name": "image with cta",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "cta",
+          "label": "titre du call to action"
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "Lien du call to action"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,69 @@
+<section class="how-it-works-multiple-image-cta">
+  <div class="row flex">
+    <div class="col-xs-12 col-sm-5">
+      <img class="" src="{{ section.settings.image1 | img_url : 'master' }}" alt="{{ section.settings.image1.alt }}">
+      <div class="texte">
+        {{ section.settings.text }}
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 align_bottom equality-div">
+      <img class="" src="{{ section.settings.image2 | img_url : 'master' }}" alt="{{ section.settings.image2.alt }}">
+    </div>
+    <div class="col-xs-12 col-sm-4 equality-div">
+      <div>
+        <img class="" src="{{ section.settings.image3 | img_url : 'master' }}" alt="{{ section.settings.image3.alt }}">
+      </div>
+      <div>
+        <img class="" src="{{ section.settings.image4 | img_url : 'master' }}" alt="{{ section.settings.image4.alt }}">
+      </div>
+    </div>
+  </div>
+  <div class="cta-container">
+    <a href="{{ section.settings.link }}" class="cta">{{ section.settings.cta }}</a>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Images - text - cta",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "image1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "image2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "image3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "image4"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texte",
+      "default": "<p>*The “Revelia” was recognized and selected at the <b>2018 ISPO Brandnew Award</b></p>"
+    },
+    {
+      "type": "text",
+      "id": "cta",
+      "label": "Texte du cta",
+      "default": "SHOP"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Lien du cta",
+      "default": "/collections/contactwear"
+    }
+  ]
+}
+{% endschema %}

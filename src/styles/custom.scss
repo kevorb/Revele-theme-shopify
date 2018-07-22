@@ -633,6 +633,7 @@ footer {
 *********************************/
 
 .page_howitworks {
+  margin-top: 30px;
   h1 {
     @include size_xxxsl;
     @include gobold;
@@ -682,12 +683,38 @@ footer {
           }
         }
       }
+      &.how-it-works-multiple-image-cta {
+        width: 100vw;
+        margin-left:-21%;
+        padding: 50px 0 30px;
+        .align_bottom {
+          align-self:flex-end;
+        }
+        .equality-div {
+          width:30%;
+        }
+        .texte {
+          width:60%;
+          margin: auto;
+          text-align: justify;
+          p { @include size_mxl;}
+        }
+        .cta-container {
+          width: 80%;
+          margin: auto;
+          text-align: right;
+          margin-top: 10px;
+          .cta { @include size_xxl; padding: 3px 59px 3px 54px;border:4px solid $black;}
+        }
+      }
       &.title-text-image {
         margin-top: 60px;
+        padding-top: 40px;
         h2 {
           text-align:left;
           margin: 0;
           margin-left: -10%;
+          @include size_xxxsl;
         }
         p {
           @include size_mxl;
@@ -695,21 +722,23 @@ footer {
         }
       }
       &.icons {
-        margin-left: -10%;
-        margin-right: -10%;
+        margin-left: -22%;
+        margin-right: -22%;
         .icons_icon {
           text-align: center;
           margin-top: 30px;
           h3 {
-            @include size_ml;
+            @include size_l;
           }
         }
       }
       &.right-cta {
         text-align: right;
         margin-top: 50px;
+        padding-top: 25px;
         .cta {
           padding: 3px 59px 3px 54px;
+          border:4px solid $black;
           @include size_xxl;
           left: 10%;
           position:relative;
@@ -770,7 +799,13 @@ footer {
             }
           }
         }
-        .cta-container { text-align: center;}
+        .cta-container {
+          text-align: center;
+          .cta {
+            padding: 4px 24px 4px 20px;
+            border:4px solid $black;
+          }
+        }
       }
       &.title-text-product {
         margin-left: -10%;
@@ -798,6 +833,7 @@ footer {
       }
       &.rolling-text {
         margin-top: 80px;
+        padding-top: 30px;
         width: 200vw;
         margin-left: -50vw;
         .rolling-text-container {
@@ -818,6 +854,20 @@ footer {
           .title_black {
             color:$black;
             padding-left: 50px;
+          }
+        }
+      }
+      &.images-cta {
+        margin-left: -10%;
+        margin-right: -10%;
+        padding-top: 50px;
+        .container-image-full {
+          color: black;
+          padding: 0;
+          img {width:100%;}
+          .cta {
+            left: 50px;
+            bottom:20px;
           }
         }
       }
@@ -889,6 +939,9 @@ footer {
     }
   }
   .page_howitworks h1 { @include size_xxl; }
+  .page_howitworks .content section.title-text-image h2 { @include size_l; }
+  .page_howitworks .content section.title-text-image {padding: 0;}
+  .page_howitworks .content section.how-it-works-multiple-image-cta .texte p { font-size: 17px;}
   .page_howitworks .content section.title-text-image p { @include size_m; }
   .page_howitworks .content section.icons .icons_icon {
      h3 {
@@ -918,6 +971,33 @@ footer {
     padding-right: 15px;
   }
   .page_howitworks .content section.title-text-product p { font-size: 12px; }
+
+  .how-it-works-multiple-image-cta .flex { display:block;}
+  .page_howitworks .content section.how-it-works-multiple-image-cta .equality-div {
+    width: 50%;
+    margin-top: 100px;
+  }
+  .page_howitworks .content section.how-it-works-multiple-image-cta .cta-container {text-align: center;}
+
+  .page_howitworks .content section.slider-avis .slider-avis-container .owl-prev {
+    margin-left:-30px;
+    i {
+      transform: scale(3, 3);
+    }
+  }
+
+  .page_howitworks .content section.slider-avis .slider-avis-container .owl-next {
+    right:-30px;
+    i {
+      transform: scale(3, 3);
+    }
+  }
+  .page_howitworks .content section.slider-avis .slider-avis-container .align_center_avis .avis-text-container {
+    font-size: 12px;
+  }
+  .page_howitworks .content section.slider-avis .cta-container .cta {
+    @include size_ml;
+  }
 
 }
 /* little fix - TODO decalage page shpo   */
