@@ -1,0 +1,21 @@
+<section class="right-cta">
+  <a class="cta" href="{{section.settings.link}}">{{ section.settings.cta }}</a>
+</section>
+{% schema %}
+{
+  "name": "Right CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cta",
+      "label": "Titre Call to action",
+      "default": "FAQ"
+    },
+    {
+      "type": "page",
+      "id": "link",
+      "label": "Link vers"
+    }
+  ]
+}
+{% endschema %}

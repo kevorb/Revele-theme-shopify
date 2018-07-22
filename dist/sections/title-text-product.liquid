@@ -1,0 +1,73 @@
+<section class="title-text-product">
+    <h2>{{ section.settings.title }}</h2>
+    {{ section.settings.text }}
+    <div class="row">
+      {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product] %}
+      <a href="{{ product.url | within :collection }}">
+        <div {% cycle 'style="padding-right:8%;"', 'style="padding-left:8%;"' %} class="col-xs-6">
+          <img src="{{ product.featured_image | img_url : 'master' }}" alt="{{ product.featured_image.alt }}" >
+          <div class="info row">
+            <div class="col-sm-7 col-xs-12">
+              <h2>{{ block.settings.title}}</h2>
+              <h4 class="red">{{ block.settings.subtitle}}</h4>
+            </div>
+            <div class="col-sm-2 col-xs-6 product-price">
+              <h5>{{ product.price | money }}</h5>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <img class="mini-img" src="{{ block.settings.image | img_url : 'master' }}" alt="{{ block.settings.image.alt }}" >
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+</section>
+{% schema %}
+{
+  "name": "Title text product",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre de la section",
+      "default": "GET YOUR REVELIA !"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texte",
+      "default": "<p>The size of the Revelia will depend on the size of your underband, your cup size and your height: take a look at our sizing chart. If you are still unsure, email us at support@reveleactivewear.com, we are always happy to help !</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produit"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre produit"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Sous-Titre produit"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image de la variant"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

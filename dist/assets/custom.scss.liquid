@@ -27,6 +27,7 @@ $specialRed:#ed2b4a;
 @mixin size_l { font-size: 26px; }
 @mixin size_xl { font-size: 32px; }
 @mixin size_xxl { font-size: 42px; }
+@mixin size_xxxsl { font-size: 56px;}
 @mixin size_xxxl { font-size: 70px; }
 
 
@@ -628,6 +629,182 @@ footer {
 
 
 /********************************
+    HOW IT WORKS
+*********************************/
+
+.page_howitworks {
+  h1 {
+    @include size_xxxsl;
+    @include gobold;
+    text-align: center;
+  }
+  .content {
+    width: 70%;
+    margin:auto;
+    section {
+      margin-top: 40px;
+      &.classic-text-left {
+        text-align: left;
+        @include size_mxl;
+      }
+      &.video_container {
+        width: 100%;
+        position:relative;
+        video {
+          object-fit: cover;
+          width: 100%;
+        }
+        .video-button {
+          display: block;
+          background: $white;
+          position: absolute;
+          width: 110px;
+          height: 110px;
+          top: 30%;
+          left: 50%;
+          margin-top: 0;
+          margin-left: -56px;
+          border-radius: 100%;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          -webkit-transform-origin: center center;
+          -ms-transform-origin: center center;
+          transform-origin: center center;
+          transition: transform 150ms linear;
+          &.hide { display:none;}
+          svg {
+            position: relative;
+            top: 32px;
+            width: 35px;
+            height: 50px;
+            left: 40px;
+          }
+        }
+      }
+      &.title-text-image {
+        margin-top: 60px;
+        h2 {
+          text-align:left;
+          margin: 0;
+          margin-left: -10%;
+        }
+        p {
+          @include size_mxl;
+          padding: 35px 0;
+        }
+      }
+      &.icons {
+        margin-left: -10%;
+        margin-right: -10%;
+        .icons_icon {
+          text-align: center;
+          margin-top: 30px;
+          h3 {
+            @include size_ml;
+          }
+        }
+      }
+      &.right-cta {
+        text-align: right;
+        margin-top: 50px;
+        .cta {
+          padding: 3px 59px 3px 54px;
+          @include size_xxl;
+          left: 10%;
+          position:relative;
+        }
+      }
+      &.slider-avis {
+        padding-top: 40px;
+        .slider-avis-container {
+          box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 2px 0 15px -4px rgba(0, 0, 0, 0.3), -3px 0 15px -4px rgba(0, 0, 0, 0.3);
+          padding: 50px;
+          .align_center_avis {
+            display: flex;
+            align-items: center;
+            padding: 40px 0;
+            .avis-image-container {
+              img {
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                object-fit: cover;
+                float: right;
+              }
+            }
+            .avis-text-container {
+              padding-right: 7%;
+            }
+          }
+          .owl-prev {
+            width: 15px;
+            height: 100px;
+            position: absolute;
+            top: 22%;
+            margin-left: 0;
+            display: block !important;
+            border: 0px solid black;
+            i {
+                transform: scale(6, 6);
+                color: $red;
+              }
+            &:hover {
+              background: transparent !Important;
+            }
+          }
+          .owl-next {
+            width: 15px;
+            height: 100px;
+            position: absolute;
+            top: 22%;
+            right: 0;
+            display: block !important;
+            border: 0px solid black;
+            i {
+                transform: scale(6, 6);
+                color: $red;
+              }
+            &:hover {
+              background: transparent !Important;
+            }
+          }
+        }
+        .cta-container { text-align: center;}
+      }
+      &.title-text-product {
+        margin-left: -10%;
+        margin-right: -10%;
+        padding-top: 50px;
+        margin-top: 60px;
+        h2 {
+          @include gobold;
+          margin-left: 20px;
+        }
+        p {
+          @include size_mxl;
+          padding: 10px 0 20px;
+        }
+        .info {
+          display: flex;
+          align-items: center;
+          padding-top: 20px;
+          h2 {margin-bottom: 0;}
+          h4 {margin-top: 0;}
+          .red { color:$red;}
+          .product-price {padding: 0;}
+          .mini-img { border:2px solid $black;}
+        }
+      }
+      &.rolling-text {
+        
+      }
+    }
+  }
+}
+
+
+/********************************
 			MEDIA QUERIES
 *********************************/
 
@@ -677,6 +854,48 @@ footer {
       #Email { width: 180px; }
     }
   }
+
+  /* page how it works */
+  .page_howitworks .content section.video_container .video-button {
+    width: 75px;
+    height: 75px;
+    margin-left: -37.5px;
+    svg {
+      top: 13px;
+      width: 23px;
+      left: 30px;
+    }
+  }
+  .page_howitworks h1 { @include size_xxl; }
+  .page_howitworks .content section.title-text-image p { @include size_m; }
+  .page_howitworks .content section.icons .icons_icon {
+     h3 {
+      @include size_m;
+      height: 40px;
+    }
+    p { font-size: 12px;}
+  }
+  .page_howitworks .content section.right-cta {
+    text-align: center;
+    .cta {left:0;}
+  }
+
+  .page_howitworks .content section.slider-avis .slider-avis-container .align_center_avis { display: block;}
+
+  .page_howitworks .content section.slider-avis .slider-avis-container .align_center_avis .avis-image-container img {
+    float: none;
+    margin: auto;
+    margin-bottom: 52px;
+  }
+
+  .page_howitworks .content section.title-text-product .info { display: block;}
+  .page_howitworks .content section.title-text-product .info h2 {@include size_m;}
+  .page_howitworks .content section.title-text-product .info h4 {@include size_s;}
+  .page_howitworks .content section.title-text-product .info .product-price {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .page_howitworks .content section.title-text-product p { font-size: 12px; }
 
 }
 /* little fix - TODO decalage page shpo   */

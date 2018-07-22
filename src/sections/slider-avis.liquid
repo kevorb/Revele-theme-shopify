@@ -1,0 +1,62 @@
+<section class="slider-avis">
+  <div class="slider-avis-container">
+    <h3>{{ section.settings.title }}</h3>
+    <div class="slider-avis-uniq owl-carousel owl-theme">
+      {% for block in section.blocks %}
+      <div class="row align_center_avis">
+        <div class="col-xs-12 col-sm-3 avis-image-container">
+          <img src="{{ block.settings.image | img_url : 'master' }}" alt="{{ block.settings.image.alt }}">
+        </div>
+        <div class="col-xs-12 col-sm-9 avis-text-container">
+          {{ block.settings.text }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="cta-container">
+      <a class="cta" href="{{section.settings.link}}">{{ section.settings.cta }}</a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Slider Avis",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre de la section",
+      "default": "WHAT THEY'RE SAYING"
+    },
+    {
+      "type": "text",
+      "id": "cta",
+      "label": "Titre Call to action",
+      "default": "SHOP NOW"
+    },
+    {
+      "type": "product",
+      "id": "link",
+      "label": "Produit"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "avis",
+      "name": "Avis",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Avis"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,22 @@
+<section class="video_container">
+  <video playsinline="">
+    <source src="{{ section.settings.url }}" type="video/mp4">
+  </video>
+  <span class="video-button">
+  	<svg class=" svg play" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="25" height="40" viewBox="0 0 25 40" enable-background="new 0 0 25 40" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.6 16.8L7 1.5C5.6 0.3 4 0.2 2.9 0.7 1.6 1.4 0.8 2.7 0.7 3.8l0 7.5v24h0c0 0.1 0 0.1 0 0.2 0 1.8 1.1 3.3 3.1 3.3 1.5 0 2.5-0.5 3.4-1.4l16.4-15.7C25.1 20.3 25.1 18.1 23.6 16.8z"></path></svg>
+  </span>
+</section>
+
+{% schema %}
+{
+  "name": "Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "url",
+      "label": "Url de la video",
+      "info": "Uploader la vidéo mp4 dans les files de Shopify (20Mo maxi)"
+    }
+  ]
+}
+{% endschema %}

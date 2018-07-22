@@ -2,3 +2,245 @@ Deploy complete @ Sun Jul 22 2018 01:19:26 GMT+0200 (GMT+02:00). added/changed 1
 Deploy complete @ Sun Jul 22 2018 01:21:14 GMT+0200 (GMT+02:00). added/changed 1 file(s): snippets/product-grid-new.liquid.
 Deploy complete @ Sun Jul 22 2018 01:21:15 GMT+0200 (GMT+02:00). added/changed 1 file(s): snippets/product-grid-new.liquid.
 Deploy complete @ Sun Jul 22 2018 01:21:25 GMT+0200 (GMT+02:00). added/changed 1 file(s): snippets/product-grid-new.liquid.
+Deploy complete @ Sun Jul 22 2018 01:30:14 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 01:30:19 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 01:30:51 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 01:31:21 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 01:31:28 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:32:03 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 01:32:21 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/classic-text-left.liquid.
+Deploy error @ Sun Jul 22 2018 01:33:00 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/classic-text-left.liquid.
+01:33:00 [production]Asset Perform Update to sections/classic-text-left.liquid at host revele-contactwear.myshopify.com
+	Status: 422 Unprocessable Entity
+	Errors: Liquid syntax error (line 1): Unknown tag ''
+ 
+Deploy complete @ Sun Jul 22 2018 01:33:33 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/classic-text-left.liquid.
+Deploy complete @ Sun Jul 22 2018 01:33:34 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 01:35:46 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:36:45 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:36:56 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/classic-text-left.liquid.
+Deploy complete @ Sun Jul 22 2018 01:37:04 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:37:14 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:38:11 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:38:16 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:38:56 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:39:03 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:39:49 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:40:00 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:40:19 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:41:00 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy error @ Sun Jul 22 2018 01:41:05 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.
+01:41:05 [production]Asset Perform Update to sections/video at host revele-contactwear.myshopify.com
+	Status: 422 Unprocessable Entity
+	Errors: Must have a .liquid file extension
+ 
+Deploy complete @ Sun Jul 22 2018 01:41:24 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:41:25 GMT+0200 (GMT+02:00). removed 1 file(s): sections/video.
+Deploy complete @ Sun Jul 22 2018 01:42:05 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:42:34 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:42:50 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:43:52 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:44:00 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:44:16 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:44:19 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:45:12 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:45:19 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:45:23 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:45:35 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:46:16 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:47:05 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:48:00 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:48:02 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:48:46 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:49:14 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:50:31 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:53:12 GMT+0200 (GMT+02:00). added/changed 4 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid, assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 01:53:48 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/video.liquid.
+Deploy complete @ Sun Jul 22 2018 01:54:15 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 01:54:26 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 01:56:25 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 01:57:45 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 01:58:14 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 01:58:49 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 01:59:59 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 02:00:40 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:01:02 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:01:11 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 02:11:54 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy error @ Sun Jul 22 2018 02:12:01 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-image.
+02:12:01 [production]Asset Perform Update to sections/title-text-image at host revele-contactwear.myshopify.com
+	Status: 422 Unprocessable Entity
+	Errors: Must have a .liquid file extension
+ 
+Deploy complete @ Sun Jul 22 2018 02:12:13 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-image.liquid.
+Deploy complete @ Sun Jul 22 2018 02:12:14 GMT+0200 (GMT+02:00). removed 1 file(s): sections/title-text-image.
+Deploy complete @ Sun Jul 22 2018 02:12:30 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-image.liquid.
+Deploy complete @ Sun Jul 22 2018 02:13:09 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:16:07 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-image.liquid.
+Deploy error @ Sun Jul 22 2018 02:17:18 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-image.liquid.
+02:17:18 [production]Asset Perform Update to sections/title-text-image.liquid at host revele-contactwear.myshopify.com
+	Status: 422 Unprocessable Entity
+	Errors: Liquid syntax error (line 5): Expected end_of_string but found string in "{{ section.settings.image | img_url 'master' }}"
+ 
+Deploy complete @ Sun Jul 22 2018 02:18:30 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-image.liquid.
+Deploy complete @ Sun Jul 22 2018 02:19:09 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:19:24 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:19:52 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:20:13 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:20:17 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:21:27 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:21:42 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 02:22:03 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/icons.liquid.
+Deploy complete @ Sun Jul 22 2018 02:26:35 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/icons.liquid.
+Deploy complete @ Sun Jul 22 2018 02:30:07 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/icons.liquid.
+Deploy complete @ Sun Jul 22 2018 02:30:40 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/icons.liquid.
+Deploy complete @ Sun Jul 22 2018 02:30:57 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/icons.liquid.
+Deploy complete @ Sun Jul 22 2018 02:31:10 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/icons.liquid.
+Deploy complete @ Sun Jul 22 2018 02:31:46 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:32:35 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:33:19 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:34:39 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:34:50 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:34:59 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:35:21 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:38:46 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:38:57 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:39:05 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:39:46 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:40:20 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:41:22 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:42:09 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 02:42:21 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/right-cta.liquid.
+Deploy complete @ Sun Jul 22 2018 02:45:49 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/right-cta.liquid.
+Deploy complete @ Sun Jul 22 2018 02:46:23 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/right-cta.liquid.
+Deploy complete @ Sun Jul 22 2018 02:46:39 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:46:41 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/right-cta.liquid.
+Deploy complete @ Sun Jul 22 2018 02:48:35 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:48:48 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:49:00 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:49:20 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:49:43 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:49:54 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:50:31 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 02:51:24 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 02:51:41 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 02:59:17 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:00:07 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:16:01 GMT+0200 (GMT+02:00). added/changed 1 file(s): layout/theme.liquid.
+Deploy complete @ Sun Jul 22 2018 03:16:35 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:16:49 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:17:11 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 03:17:51 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 03:19:55 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 03:22:01 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:22:15 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:22:44 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:23:05 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:23:29 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:27:26 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:27:32 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:28:02 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:28:24 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:28:51 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:29:22 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:29:52 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:30:58 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:31:04 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:36:18 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:36:30 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:38:08 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:38:20 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:39:42 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:40:17 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:42:10 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:42:20 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 03:43:20 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:43:57 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:44:44 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:44:55 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:45:09 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:46:14 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/slider-avis.liquid.
+Deploy complete @ Sun Jul 22 2018 03:47:07 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:48:12 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:48:19 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 03:50:25 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 03:50:36 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 03:50:49 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 03:51:12 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy error @ Sun Jul 22 2018 03:59:03 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+03:59:03 [production]Asset Perform Update to sections/title-text-product.liquid at host revele-contactwear.myshopify.com
+	Status: 422 Unprocessable Entity
+	Errors: Invalid JSON in tag 'schema'
+ 
+Deploy complete @ Sun Jul 22 2018 03:59:40 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy error @ Sun Jul 22 2018 03:59:50 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+03:59:50 [production]Asset Perform Update to sections/title-text-product.liquid at host revele-contactwear.myshopify.com
+	Status: 422 Unprocessable Entity
+	Errors: Invalid JSON in tag 'schema'
+ 
+Deploy error @ Sun Jul 22 2018 04:00:08 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+04:00:08 [production]Asset Perform Update to sections/title-text-product.liquid at host revele-contactwear.myshopify.com
+	Status: 422 Unprocessable Entity
+	Errors: Invalid JSON in tag 'schema'
+ 
+Deploy error @ Sun Jul 22 2018 04:00:12 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+04:00:12 [production]Asset Perform Update to sections/title-text-product.liquid at host revele-contactwear.myshopify.com
+	Status: 422 Unprocessable Entity
+	Errors: Invalid JSON in tag 'schema'
+ 
+Deploy complete @ Sun Jul 22 2018 04:00:13 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 04:00:15 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 04:00:28 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 04:00:50 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 04:01:22 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:02:03 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:02:43 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:03:02 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:06:10 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:06:15 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:06:19 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:06:38 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:08:40 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:08:52 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:09:46 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:09:54 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:10:32 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:11:24 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:12:15 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:12:31 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:13:36 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:13:50 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:14:13 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:14:37 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:15:00 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:15:33 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:15:44 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:16:06 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:16:18 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:16:23 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:16:57 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:17:06 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:17:18 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:18:25 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:18:31 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:19:24 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:19:39 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:20:45 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:21:48 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:21:53 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/title-text-product.liquid.
+Deploy complete @ Sun Jul 22 2018 04:22:36 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:24:21 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:25:00 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:28:31 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:29:06 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:29:24 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:30:16 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:30:42 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 04:35:32 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 15:40:59 GMT+0200 (GMT+02:00). added/changed 1 file(s): assets/custom.js.
+Deploy complete @ Sun Jul 22 2018 15:41:16 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 15:41:31 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/rolling-text.liquid.
+Deploy complete @ Sun Jul 22 2018 15:41:52 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/rolling-text.liquid.
+Deploy complete @ Sun Jul 22 2018 15:42:23 GMT+0200 (GMT+02:00). added/changed 2 file(s): assets/custom.scss.liquid, assets/swatch.scss.liquid.
+Deploy complete @ Sun Jul 22 2018 15:42:24 GMT+0200 (GMT+02:00). added/changed 1 file(s): templates/page.how_it_works.liquid.
+Deploy complete @ Sun Jul 22 2018 15:42:26 GMT+0200 (GMT+02:00). added/changed 1 file(s): sections/rolling-text.liquid.

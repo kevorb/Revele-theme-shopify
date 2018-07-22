@@ -1,0 +1,31 @@
+<section class="title-text-image">
+  <h2>{{ section.settings.title }}</h2>
+  {{ section.settings.text }}
+  <div class="image_container">
+    <img src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}" >
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Title text image",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "PATENTED SHOCK ABSORPTION TECHNOLOGY"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texte",
+      "default": "<p>We sourced the best technology out there for the Revelia, capable of absorbing up to 90% of shocks against a hard surface, like your chest and shoulders ! Our technology is perfectly encapsulated to allow for ultimate resistance and comfort with it’s seamless finishings.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}
