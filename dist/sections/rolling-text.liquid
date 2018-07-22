@@ -1,3 +1,37 @@
 <section class="rolling-text">
-
+  <div class="rolling-text-container marquee">
+    <span class="title_red">{{ section.settings.title1 }}</span>
+    <span class="title_black">{{ section.settings.title2 }}</span>
+    <span class="title_red">{{ section.settings.title1 }}</span>
+    <span class="title_black">{{ section.settings.title2 }}</span>
+    <span class="title_red">{{ section.settings.title1 }}</span>
+    <span class="title_black">{{ section.settings.title2 }}</span>
+    <span class="title_red">{{ section.settings.title1 }}</span>
+    <span class="title_black">{{ section.settings.title2 }}</span>
+    <span class="title_red">{{ section.settings.title1 }}</span>
+    <span class="title_black">{{ section.settings.title2 }}</span>
+    <span class="title_red">{{ section.settings.title1 }}</span>
+    <span class="title_black">{{ section.settings.title2 }}</span>
+  </div>
 </section>
+{% schema %}
+{
+  "name": "Rolling Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Titre 1",
+      "default": "CONTACTWEAR"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "Titre 2",
+      "default": "KICK PUNCH TACKLE TAKEDOWN BLOWN",
+      "info": "info",
+      "placeholder": "placeholder"
+    }
+  ]
+}
+{% endschema %}

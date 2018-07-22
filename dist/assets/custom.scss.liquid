@@ -797,7 +797,29 @@ footer {
         }
       }
       &.rolling-text {
-        
+        margin-top: 80px;
+        width: 200vw;
+        margin-left: -50vw;
+        .rolling-text-container {
+          padding: 14px 0;
+          border-top:10px solid $red;
+          border-bottom:10px solid $red;
+          letter-spacing: 2px;
+          height:90px;
+          @include gobold;
+          @include size_xl;
+          .title_red {
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: $red;
+            letter-spacing: 15px;
+            color:$white;
+            padding-left: 50px;
+          }
+          .title_black {
+            color:$black;
+            padding-left: 50px;
+          }
+        }
       }
     }
   }
