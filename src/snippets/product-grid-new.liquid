@@ -1,4 +1,20 @@
-<img src="{{ product.featured_image.src | product_img_url: 'original' }}" alt="{{ product.featured_image.alt }}">
+{% assign image_crop = false %}
+{% for image in product.images %}
+  {% if image.alt == 'crop' %}
+    {% assign cropurl = image.src | img_url: 'large' %}
+	{% assign image_crop = true %}
+  {% endif %}
+{% endfor %}
+<script>
+  var temp{{ product.id }} = "";
+</script>
+<img
+{% if image_crop == true %}
+onmouseover="temp{{ product.id }} = $(this).attr('src');$(this).attr('src', '{{ cropurl }}')"
+onmouseleave="$(this).attr('src', temp{{ product.id }})"
+{% endif %}
+
+src="{{ product.featured_image.src | product_img_url: 'original' }}" alt="{{ product.featured_image.alt }}">
 <div class="product_info">
   {{ product.title }}
   <span class="product_price">{{ product.price | money }}</span>

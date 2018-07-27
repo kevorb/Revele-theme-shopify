@@ -5,7 +5,7 @@
 $black:#000;
 $white:#ffffff;
 $grey:grey;
-$red:#e03332;
+$red:#cf3027;
 
 $specialBlue:#8cd7f8;
 $specialRed:#ed2b4a;
@@ -23,7 +23,7 @@ $specialRed:#ed2b4a;
 @mixin size_s { font-size: 14px; }
 @mixin size_m { font-size: 16px; }
 @mixin size_ml { font-size: 20px; }
-@mixin size_mxl { font-size: 24px; }
+@mixin size_mxl { font-size: 18pt; }
 @mixin size_l { font-size: 26px; }
 @mixin size_xl { font-size: 32px; }
 @mixin size_xxl { font-size: 42px; }
@@ -89,10 +89,23 @@ textarea, input, button { outline: none; }
   background: $white;
   color: black;
   @include gobold_ita;
-  border: 2px solid black;
+  border: 4px solid black;
   padding: 3px 12px 3px 8px;
+  animation: .2s;
+  &:hover {
+    background: $black;
+    color: $white;
+//    font-size: 34px;
+  }
 }
 
+@media only screen and (min-width: 750px) {
+  .page-container {
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 
 /********************************
 			HEADER
@@ -391,6 +404,7 @@ footer {
         span {
           color: $black;
           padding-left: 20px;
+          font-weight: 100;
         }
       }
       .product-form {
@@ -412,14 +426,20 @@ footer {
             text-align: center;
             margin-top: 30px;
             h4 { @include size_l; }
-            h5 { color:$grey; }
+            h5 {
+              color:$grey;
+              @include titi;
+
+            }
           }
         }
         .swatch.clearfix {
           width: 100%;
+          text-align: center;
           .swatch-element {
-            margin:0;
-            min-width: 20%;
+            margin:auto;
+            width: 50px;
+            height: 50px;
             &.selected {
               label {
                 background: $black;
@@ -428,15 +448,16 @@ footer {
               }
             }
             label {
-              width: 100%;
-              height: auto !important;
-              padding:8px 0;
+              width: 50px;
+              height: 50px !Important;
+              line-height: 50px !Important;
+              padding:0;
               margin: 25px 0;
               @include size_m;
               border-radius: 0;
               box-shadow: none;
               background: $white;
-              border: 1px solid $grey;
+              border: 2px solid $black;
             }
           }
         }
@@ -468,11 +489,11 @@ footer {
   	h4 {
        text-transform:uppercase;
        text-align: center;
-        font-weight:900;
-        @include size_l;
+        font-weight:100;
+        @include size_ml;
         cursor:pointer;
         border-top:1px solid;
-        padding:30px 0;
+        padding:22px 0;
         margin:0;
         span {
           transition:.2s;
@@ -497,6 +518,7 @@ footer {
         margin-top: 10px;
         color: $black;
         margin-bottom:35px;
+        @include size_s;
       }
       &:first-child {
         h4 {
@@ -684,11 +706,13 @@ footer {
         }
       }
       &.how-it-works-multiple-image-cta {
-        width: 100vw;
-        margin-left:-21%;
-        padding: 50px 0 30px;
+      /*  width: 100vw;
+        margin-left:-21%;*/
+        margin-left: -11%;
+        margin-right: -11%;
+        padding: 30px 0 30px;
         .align_bottom {
-          align-self:flex-end;
+          align-self:center;
         }
         .equality-div {
           width:30%;
@@ -722,8 +746,8 @@ footer {
         }
       }
       &.icons {
-        margin-left: -22%;
-        margin-right: -22%;
+        margin-left: -14%;
+        margin-right: -14%;
         .icons_icon {
           text-align: center;
           margin-top: 30px;
@@ -745,6 +769,8 @@ footer {
         }
       }
       &.slider-avis {
+        margin-left: -10%;
+        margin-right: -10%;
         padding-top: 40px;
         .slider-avis-container {
           box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 2px 0 15px -4px rgba(0, 0, 0, 0.3), -3px 0 15px -4px rgba(0, 0, 0, 0.3);
@@ -755,8 +781,8 @@ footer {
             padding: 40px 0;
             .avis-image-container {
               img {
-                width: 150px;
-                height: 150px;
+                width: 170px;
+                height: 170px;
                 border-radius: 100%;
                 object-fit: cover;
                 float: right;
@@ -775,7 +801,7 @@ footer {
             display: block !important;
             border: 0px solid black;
             i {
-                transform: scale(6, 6);
+                transform: scale(2, 2);
                 color: $red;
               }
             &:hover {
@@ -791,7 +817,7 @@ footer {
             display: block !important;
             border: 0px solid black;
             i {
-                transform: scale(6, 6);
+                transform: scale(2, 2);
                 color: $red;
               }
             &:hover {
@@ -875,6 +901,29 @@ footer {
   }
 }
 
+/********************************
+    POPUP
+*********************************/
+
+.popup {
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  display: none;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  .middle {
+    width: 80%;
+    margin: auto;
+    margin-top: 10vh;
+    height: 80vh;
+    background: white;
+    overflow: scroll;
+    padding: 40px 30px 30px 30px;
+  }
+}
 
 /********************************
 			MEDIA QUERIES
@@ -982,14 +1031,14 @@ footer {
   .page_howitworks .content section.slider-avis .slider-avis-container .owl-prev {
     margin-left:-30px;
     i {
-      transform: scale(3, 3);
+      transform: scale(1, 1);
     }
   }
 
   .page_howitworks .content section.slider-avis .slider-avis-container .owl-next {
     right:-30px;
     i {
-      transform: scale(3, 3);
+      transform: scale(1, 1);
     }
   }
   .page_howitworks .content section.slider-avis .slider-avis-container .align_center_avis .avis-text-container {
@@ -997,6 +1046,11 @@ footer {
   }
   .page_howitworks .content section.slider-avis .cta-container .cta {
     @include size_ml;
+  }
+
+  .page_howitworks .content section.slider-avis .slider-avis-container .align_center_avis .avis-image-container img {
+    width: 150px;
+    height:150px;
   }
 
 }

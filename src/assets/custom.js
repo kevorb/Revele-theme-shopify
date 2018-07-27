@@ -82,8 +82,10 @@ $('.slider-avis-uniq.owl-carousel').owlCarousel({
   items:1,
   nav:true,
   dots :false,
-  navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
+  navText : ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>']
 });
+
+
 
 /********************
   Rolling text
@@ -91,7 +93,7 @@ $('.slider-avis-uniq.owl-carousel').owlCarousel({
 
 $('.marquee').marquee({
     //speed in milliseconds of the marquee
-    duration: 12000,
+    duration: 8000,
     //gap in pixels between the tickers
   //  gap: 50,
     //time in milliseconds before the marquee will start animating
@@ -100,6 +102,23 @@ $('.marquee').marquee({
     direction: 'left',
     //true or false - should the marquee be duplicated to show an effect of continues flow
     duplicated: true
+});
+
+/********************
+  Popup function
+********************/
+
+$(document).ready(function(){
+  $('#active_popup').on('click', function() {
+    var popup_name = $(this).attr('data-popup');
+    $('.popup').each(function(){
+      if ($(this).hasClass(popup_name))
+        $(this).fadeIn();
+    });
+  });
+  $('.popup').on('click', function() {
+    $(this).fadeOut();
+  });
 });
 
 
