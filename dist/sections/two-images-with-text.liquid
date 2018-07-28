@@ -1,0 +1,56 @@
+<section class="two-images-with-text">
+  <div class="row">
+    <div class="col-xs-7 no-padding relative">
+      <img class="heightOfParent heightOfParent-all" src="{{ section.settings.image_left | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
+      <h2 class="absolute">
+        {{ section.settings.title }}
+      </h2>
+      <div class="absolute cta_container">
+        <a href="{{ section.settings.link }}" class="cta">{{ section.settings.cta }}</a>
+      </div>
+    </div>
+    <div class="col-xs-5 no-padding">
+      <img class="heightOfParent heightOfParent-all" src="{{ section.settings.image_right | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Two Images with Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Image de gauche 7/12"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Image de droite 5/12"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Titre"
+    },
+    {
+      "type": "text",
+      "id": "cta",
+      "label": "Call to action text",
+      "default": "SHOP PROTECTION"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Call to action link",
+      "default": "/collections/contactwear"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two images with text",
+      "category": "Custom zerance"
+    }
+  ]
+}
+{% endschema %}

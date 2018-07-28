@@ -99,6 +99,8 @@ textarea, input, button { outline: none; }
   }
 }
 
+.no-padding {padding:0 !important;}
+
 @media only screen and (min-width: 750px) {
   .page-container {
     -ms-transform: none;
@@ -926,8 +928,93 @@ footer {
 }
 
 /********************************
+    Home page
+*********************************/
+
+.template-index {
+  .main-content { padding: 0 !important; }
+  section {
+    &.two-images-with-text {
+      img {
+        width:100%;
+        object-fit: cover;
+      }
+      h2 {
+        color:$white;
+        top: 21%;
+        right: 10%;
+        text-align: right;
+        p {
+          margin:0;
+          color:$white;
+          @include gobold;
+          letter-spacing: 2.5px;
+          @include size_xxxsl;
+        }
+      }
+      .cta_container {
+        right: 10%;
+        bottom: 18%;
+      }
+    }
+    &.product-with-video {
+      padding: 30px;
+      .cta_container {
+        right: 10%;
+        bottom: 12%;
+      }
+      video {
+        object-fit: cover;
+        width: 100%;
+      }
+      .video-button {
+        display: block;
+        background: $white;
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        top: 42%;
+        left: 50%;
+        margin-top: 0;
+        margin-left: -56px;
+        border-radius: 100%;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+        transform-origin: center center;
+        transition: transform 150ms linear;
+        &.hide { display:none;}
+        svg {
+          position: relative;
+          top: 32px;
+          width: 35px;
+          height: 50px;
+          left: 40px;
+        }
+      }
+    }
+  }
+}
+
+/********************************
 			MEDIA QUERIES
 *********************************/
+
+@media all and (max-width:1280px) {
+  .template-index { section { &.two-images-with-text { h2 {
+        p {
+            @include size_xl;
+        }
+      }
+      .cta_container {
+          .cta { @include size_s; }
+        }
+      }
+    }
+  }
+}
 
 @media all and (max-width:767px) {
   /* header */
@@ -1052,6 +1139,21 @@ footer {
     width: 150px;
     height:150px;
   }
+
+  .template-index { section { &.two-images-with-text { h2 {
+        p {
+            letter-spacing: 1.5px;
+            @include size_m;
+        }
+      }
+      .cta_container {
+        bottom:13%;
+          .cta { @include size_xs;border-width:2px; }
+        }
+      }
+    }
+  }
+
 
 }
 /* little fix - TODO decalage page shpo   */

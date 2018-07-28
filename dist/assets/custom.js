@@ -2,17 +2,25 @@
       RESIZE IMAGE
 *********************/
 
-
 function resizeImage() {
+  $('.heightOfParent-all').height("auto");
+  $('.heightOfParent-all').height($('.heightOfParent').parent().height());
+}
+
+function resizeImageDesktop() {
   $('.heightOfParent').height("auto");
   $('.heightOfParent').height($('.heightOfParent').parent().height());
 }
 
 $(document).ready(function() {
   if ($(window).width() >= 767)
+    resizeImageDesktop();
+  else
     resizeImage();
   $( window ).resize(function() {
     if ($(window).width() >= 767)
+      resizeImageDesktop();
+    else
       resizeImage();
   });
 });
