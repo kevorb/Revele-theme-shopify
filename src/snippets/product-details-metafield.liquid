@@ -15,7 +15,10 @@
 
 <script>
   $('.product_metafield h4').on('click', function() {
+    $('.product_metafield p').slideUp(400);
   	$(this).next().slideToggle(400);
+    $('.product_metafield h4 span').removeClass("rotate");
     $(this).find("span").toggleClass("rotate");
   });
+  $('.product_metafield h4').eq(0).click();
 </script>

@@ -16,6 +16,14 @@ onmouseleave="$(this).attr('src', temp{{ product.id }})"
 
 src="{{ product.featured_image.src | product_img_url: 'original' }}" alt="{{ product.featured_image.alt }}">
 <div class="product_info">
+  {% if product.title == "The Revelia w/o shoulder pads" %}
+  THE REVELIA<BR/>
+  <span class="product_subtitle">NO SHOULDER PADS</span>
+  {% elsif product.title == "The Revelia with shoulder pads" %}
+  THE REVELIA<BR/>
+  <span class="product_subtitle">WHITH SHOULDER PADS</span>
+  {% else %}
   {{ product.title }}
+  {% endif %}
   <span class="product_price">{{ product.price | money }}</span>
 </div>

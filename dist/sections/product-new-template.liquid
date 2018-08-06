@@ -37,11 +37,13 @@
         </div>
         <div class="row little-margin-top">
           {% for image in product.images %}
+          {% unless image.alt == "crop" %}
             {% if forloop.index0 > 3 %}
             <div class="col-xs-6">
               <img src="{{ image.src | product_img_url: 'master' }}" alt="{{ image.alt }}"/>
             </div>
             {% endif %}
+          {% endunless %}
           {% endfor %}
         </div>
       </div>
@@ -49,10 +51,22 @@
         <div class="grid__item {{ product_description_width }}">
           <div class="product-single__meta">
 
+            {% if product.title == "The Revelia w/o shoulder pads" or product.title == "The Revelia with shoulder pads" %}
+            <h1 class="product-single__title">The revelia</h1>
+            {% elsif product.title == "Compression Leggings - Blue" or product.title == "Compression Leggings - Red" %}
+            <h1 class="product-single__title">Compression Leggings</h1>
+            {% elsif product.title == "Révèle©Thermo Zipup - Blue" or product.title == "Révèle©Thermo Zipup - Red" %}
+            <h1 class="product-single__title">Révèle©Thermo Zipup</h1>
+            {% else %}
             <h1 class="product-single__title">{{ product.title }}</h1>
+            {% endif %}
 
             <h2 class="product__price">
               {% include 'product-price', variant: current_variant %}
+              <div class="relative inline-block">
+                <i class="fas fa-info-circle"></i>
+                <div class="display_none info_price">Prices can be displayed in €, $ or £ to give you an idea of the products’ price in these currencies. Payment is in euro.</div>
+              </div>
             </h2>
 
             {% capture "form_classes" -%}
@@ -120,11 +134,31 @@
                   </div>
                 </div>
               </div>
-              {% elsif product.title == "The Revelia, chest protection with shoulder pads"%}
+              {% elsif product.title == "Révèle©Thermo Zipup - Blue"%}
+              <div class="swatch clearfix product-special-swatch">
+                <div class="header">
+                  <h4>COLOR : BLUE</h4>
+                  <div class="flex">
+                    <div class="product-special-swatch-color colorBlue"></div>
+                    <a href="/collections/all/products/copy-of-revele©thermo-zipup-red"><div class="product-special-swatch-color colorRed"></div></a>
+                  </div>
+                </div>
+              </div>
+              {% elsif product.title == "Révèle©Thermo Zipup - Red"%}
+              <div class="swatch clearfix product-special-swatch">
+                <div class="header">
+                  <h4>COLOR : RED</h4>
+                  <div class="flex">
+                    <a href="/collections/all/products/revele©thermo-zipup"><div class="product-special-swatch-color colorBlue"></div></a>
+                    <div class="product-special-swatch-color colorRed"></div>
+                  </div>
+                </div>
+              </div>
+              {% elsif product.title == "The Revelia with shoulder pads"%}
               <div class="swatch clearfix product-special-swatch">
                 <div class="header">
                   <h4>WITH OR W/O : <span class="red">WITH SHOULDER PADS</span></h4>
-                  <div class="flex">
+                  <div class="flex flex_revelia">
                     <div class="product-special-swatch-revelia active">
                       <img src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-avec-epaules-icon.png?13440809533093614531" alt="with shoulder pads">
                     </div>
@@ -136,11 +170,11 @@
                   </div>
                 </div>
               </div>
-              {% elsif product.title == "The Revelia, chest protection w/o shoulder pads"%}
+              {% elsif product.title == "The Revelia w/o shoulder pads"%}
               <div class="swatch clearfix product-special-swatch">
                 <div class="header">
                   <h4>WITH OR W/O : <span class="red">W/O SHOULDER PADS</span></h4>
-                  <div class="flex">
+                  <div class="flex flex_revelia">
                     <a href="/collections/all/products/the-revelia-chest-protection-with-shoulder-pads">
                       <div class="product-special-swatch-revelia">
                         <img src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-avec-epaules-icon.png?13440809533093614531" alt="with shoulder pads">

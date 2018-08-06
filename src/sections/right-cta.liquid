@@ -1,4 +1,5 @@
 <section class="right-cta">
+  <a class="cta" href="{{section.settings.linkgauche }}">{{ section.settings.ctagauche }}</a>
   <a class="cta" href="{{section.settings.link}}">{{ section.settings.cta }}</a>
 </section>
 {% schema %}
@@ -8,12 +9,23 @@
     {
       "type": "text",
       "id": "cta",
-      "label": "Titre Call to action",
+      "label": "Titre Call to action droite",
       "default": "FAQ"
     },
     {
       "type": "page",
       "id": "link",
+      "label": "Link vers"
+    },
+    {
+      "type": "text",
+      "id": "ctagauche",
+      "label": "Titre Call to action gauche",
+      "default": "SHOP"
+    },
+    {
+      "type": "collection",
+      "id": "linkgauche",
       "label": "Link vers"
     }
   ]

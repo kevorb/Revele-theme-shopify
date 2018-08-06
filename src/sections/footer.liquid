@@ -1,6 +1,6 @@
 <footer>
   <div class="footer_top">
-    <img src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
+    <img style="width:{{ section.settings.logo_max_width }}pt" src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
   </div>
   <div class="footer_bottom row">
     <div class="footer_left footer_menu_container col-sm-8 col-xs-12">
@@ -149,6 +149,16 @@
         "type": "image_picker",
         "id": "image",
         "label": "Footer Image"
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width",
+        "label": "Largeur personnalisée du logo",
+        "min": 50,
+        "max": 450,
+        "step": 5,
+        "unit": "pt",
+        "default": 100
       },
       {
         "type": "link_list",

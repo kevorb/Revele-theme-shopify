@@ -99,7 +99,7 @@
   {% unless same_type and current_product.type != product.type %}
   <div class="grid__item {{ grid_item_width }}">
     <a href="{{ product.url | within: collection }}">
-      {% include 'product-grid-new-related' %}
+      {% include 'product-grid-new' %}
     </a>
   </div>
   {% assign counter = counter | plus: 1 %}

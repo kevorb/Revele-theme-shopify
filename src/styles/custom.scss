@@ -18,17 +18,17 @@ $specialRed:#ed2b4a;
 @mixin gobold_ita {font-family: "Gobold_Bold_Italic";}
 @mixin titi {font-family: "TitilliumWeb";}
 
-@mixin size_xxs { font-size: 8px; }
-@mixin size_xs { font-size: 10px; }
-@mixin size_s { font-size: 14px; }
-@mixin size_m { font-size: 16px; }
-@mixin size_ml { font-size: 20px; }
+@mixin size_xxs { font-size: 6pt; }
+@mixin size_xs { font-size: 7.5pt; }
+@mixin size_s { font-size: 10.5pt; }
+@mixin size_m { font-size: 12pt; }
+@mixin size_ml { font-size: 15pt; }
 @mixin size_mxl { font-size: 18pt; }
-@mixin size_l { font-size: 26px; }
-@mixin size_xl { font-size: 32px; }
-@mixin size_xxl { font-size: 42px; }
-@mixin size_xxxsl { font-size: 56px;}
-@mixin size_xxxl { font-size: 70px; }
+@mixin size_l { font-size: 19.5pt; }
+@mixin size_xl { font-size: 24pt; }
+@mixin size_xxl { font-size: 31.5pt; }
+@mixin size_xxxsl { font-size: 42pt;}
+@mixin size_xxxl { font-size: 52.5pt; }
 
 
 /********************************
@@ -74,15 +74,16 @@ textarea, input, button { outline: none; }
 .relative { position:relative; }
 .absolute { position: absolute; }
 
-.flex { display:flex;}
-
-.img-cover { object-fit: cover; }
+.img-cover { object-fit: cover; width:100%; }
 
 .heightOfParent { overflow: hidden;}
 
 .little-margin-top { margin-top: 30px; }
 
 .display_none { display:none; }
+.inline-block {display: inline-block;}
+.flex { display:flex;}
+
 
 .cta {
   @include size_xl;
@@ -306,6 +307,10 @@ footer {
 *********************************/
 
 .collection_new {
+  /* change gutter grid */
+  .col-sm-6 {
+    padding:0 20pt;
+  }
   .collection_menu {
     padding: 0 0 50px;
     .collection_menu_item {
@@ -339,8 +344,12 @@ footer {
         @include gobold_ita;
         @include size_xl;
         color:$black;
-        .product_price {
+        .product_subtitle {
           @include size_mxl;
+          margin-left: 15px;
+        }
+        .product_price {
+          @include size_ml;
         }
       }
     }
@@ -350,7 +359,7 @@ footer {
   }
   .collection_container {
     padding:0 20px;
-    margin-top: 20px;
+    margin-top: 25pt;
     .collection_product_card {
       &:nth-child(4n+1) {
         padding-right: 25px;
@@ -360,20 +369,12 @@ footer {
         padding-left: 25px;
         padding-bottom: 15px;
       }
-      &:nth-child(4n+3) {
-        padding-right: 25px;
-        padding-top: 15px;
-      }
-      &:nth-child(4n+4) {
-        padding-left: 25px;
-        padding-top: 15px;
-      }
-    }
-    .row {
-      margin-top: 20px;
     }
     .row_margin_top {
       margin-top: 20px;
+      .row:first-child {
+        margin-bottom: 20px;
+      }
     }
     .product_info {
       padding-top: 10px;
@@ -402,7 +403,23 @@ footer {
       }
       h2 {
         @include size_l;
-        margin-top: 20px;
+        margin-top: 5pt;
+        margin-bottom:0;
+        display: flex;
+        .price { margin-bottom: 0;width:auto;}
+        .fa-info-circle { color:$grey; cursor: help; font-size: 14pt;}
+        .info_price {
+          @include size_xs;
+          min-width: 300px;
+          position: absolute;
+          bottom: 0;
+          left: 10pt;
+          color: grey;
+          @include titi;
+          text-transform: none;
+          padding: 3px 14px;
+          text-align: justify;
+        }
         span {
           color: $black;
           padding-left: 20px;
@@ -419,14 +436,16 @@ footer {
           @include size_m;
           width: 90%;
           margin:auto;
+          margin-top: 15pt;
         }
         .selector-wrapper.js.product-form__item {
           display: none;
         }
         .swatch {
+          margin:0 !important;
           .header {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20pt;
             h4 { @include size_l; }
             h5 {
               color:$grey;
@@ -442,6 +461,8 @@ footer {
             margin:auto;
             width: 50px;
             height: 50px;
+            float: none;
+            display: inline-block;
             &.selected {
               label {
                 background: $black;
@@ -454,7 +475,7 @@ footer {
               height: 50px !Important;
               line-height: 50px !Important;
               padding:0;
-              margin: 25px 0;
+              margin: 0;
               @include size_m;
               border-radius: 0;
               box-shadow: none;
@@ -467,7 +488,7 @@ footer {
       .product-single__description {
         color: $black;
         .real_description {
-          margin-top: 30px;
+          margin-top: 0;
           p span { display: block; overflow: hidden; }
         }
         .product_picto {
@@ -533,9 +554,10 @@ footer {
     margin-bottom: 30px;
     margin-top: -10px;
     .red { color:$red; }
+    .flex_revelia { width:55%; margin:auto;}
     .product-special-swatch-revelia {
-      margin-bottom: 30px;
-      margin-top: 15px;
+      margin-bottom: 0;
+      margin-top: 5pt;
       cursor: pointer;
       &.active { border:3px solid $black;}
     }
@@ -567,10 +589,13 @@ footer {
     @include size_ml;
   }
   .product_info {
-    @include size_m;
+    padding-top: 10px;
     @include gobold_ita;
-    color: black;
-    margin-top:10px;
+    @include size_s;
+    color:$black;
+    .product_price {
+      display: block;
+    }
   }
 }
 
@@ -768,6 +793,7 @@ footer {
           @include size_xxl;
           left: 10%;
           position:relative;
+          margin-left: 20pt;
         }
       }
       &.slider-avis {
@@ -1159,8 +1185,8 @@ footer {
 /* little fix - TODO decalage page shpo   */
 
 .container-fluid {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20pt;
+  padding-right: 20pt;
 }
 
 @media all and (min-width: 750px) {

@@ -26,6 +26,37 @@ $(document).ready(function() {
 });
 
 /*********************
+RESIZE COLLECTION IMAGE
+**********************/
+
+function resize_collection_image() {
+  $('.getHeight').each(function(){
+    var this_id = $(this).attr("data-height");
+    $(this).height($('#' + this_id).height());
+  });
+}
+
+$(document).ready(function() {
+  resize_collection_image();
+  $( window ).resize(function() {
+    if ($(window).width() >= 767)
+      resize_collection_image();
+  });
+});
+
+
+/********************
+   info product page
+*********************/
+
+$('.product_details .fa-info-circle').mouseover(function() {
+    $('.display_none').fadeIn(100);
+  })
+  .mouseout(function() {
+    $('.display_none').fadeOut(100);
+  });
+
+/*********************
       SWATCH
 *********************/
 
