@@ -1021,6 +1021,136 @@ footer {
         }
       }
     }
+    &.home_multiple_image {
+      .relative {
+        text-align: center;
+        .text-left {
+          position: absolute;
+          top: 36%;
+          right: -18%;
+          -webkit-transform: rotate(-90deg);
+          -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          color: black;
+        }
+        .cta {
+          position: absolute;
+          right: 80px;
+          bottom: 49px;
+          @include size_l;
+        }
+        .image-center {
+          top: -24px;
+          left: 39px;
+          max-height: 100%;
+        }
+        h4 {
+          color:$white;
+          width: 45%;
+          top: 120px;
+          left: 40%;
+          text-align: left;
+          font-size: 17px;
+        }
+        h3.center-text {
+          color:$white;
+          width: 40%;
+          margin-left: 38%;
+          text-align: left;
+          top: 240px;
+          z-index: 9;
+        }
+        .section-title {
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: #ffffff;
+          letter-spacing: 30px;
+          z-index: 10;
+          color: #fff0;
+          padding-left: 50px;
+          top: 30px;
+          right: 30px;
+          @include size_xxxsl;
+          @include gobold;
+        }
+      }
+      .height-500 {
+        height:600px;
+      }
+    }
+    &.rolling-text {
+      width: 200vw;
+      margin-left: -50vw;
+      .rolling-text-container {
+        padding: 14px 0;
+        border-top:10px solid $black;
+        border-bottom:10px solid $black;
+        letter-spacing: 2px;
+        height:90px;
+        @include gobold_ita;
+        @include size_xl;
+        .title_black {
+          color:$black;
+          padding-left: 50px;
+        }
+      }
+    }
+    &.home_avis {
+      padding: 50px;
+      .slider-avis-container {
+        .align_center_avis {
+          text-align: center;
+          .avis-image-container {
+            img {
+              width: 150px;
+              height: 150px;
+              border-radius: 100%;
+              margin: auto;
+              object-fit: cover;
+            }
+          }
+          .avis-text-container {
+          }
+        }
+        .owl-prev {
+          width: 15px;
+          height: 100px;
+          position: absolute;
+          top: 22%;
+          margin-left: 0;
+          display: block !important;
+          border: 0px solid black;
+          i {
+              transform: scale(2, 2);
+              color: $red;
+            }
+          &:hover {
+            background: transparent !Important;
+          }
+        }
+        .owl-next {
+          width: 15px;
+          height: 100px;
+          position: absolute;
+          top: 22%;
+          right: 0;
+          display: block !important;
+          border: 0px solid black;
+          i {
+              transform: scale(2, 2);
+              color: $red;
+            }
+          &:hover {
+            background: transparent !Important;
+          }
+        }
+      }
+    }
+    &.section-cta {
+      text-align: center;
+      margin: 20px auto;
+    }
   }
 }
 

@@ -1,0 +1,27 @@
+<section class="section-cta">
+  <a class="cta" href="{{section.settings.link}}">{{ section.settings.cta }}</a>
+</section>
+{% schema %}
+{
+  "name": "CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cta",
+      "label": "Titre Call to action",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Lien"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call to action",
+      "category": "Custom zerance"
+    }
+  ]
+}
+{% endschema %}

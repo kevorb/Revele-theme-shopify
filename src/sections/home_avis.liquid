@@ -1,0 +1,55 @@
+<section class="home_avis">
+  <div class="slider-avis-container">
+    <div class="row slider-avis-fourth owl-carousel owl-theme">
+      {% for block in section.blocks %}
+      <div class="align_center_avis">
+        <div class="avis-image-container">
+          <img src="{{ block.settings.image | img_url : 'master' }}" alt="{{ block.settings.image.alt }}">
+        </div>
+        <div class="avis-text-container">
+          {{ block.settings.avis }}
+        </div>
+        <div class="avis-info-container">
+          {{ block.settings.info }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Home avis",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "avis",
+      "name": "Avis",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "avis",
+          "label": "Avis"
+        },
+        {
+          "type": "text",
+          "id": "info",
+          "label": "Info avis"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home avis",
+      "category": "Custom zerance"
+    }
+  ]
+}
+{% endschema %}

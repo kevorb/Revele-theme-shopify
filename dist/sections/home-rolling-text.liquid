@@ -1,0 +1,41 @@
+<section class="rolling-text">
+  <div class="rolling-text-container marquee">
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+    <span class="title_black">{{ section.settings.title }}</span>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Rolling Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "WHAT THEY'RE SAYING"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rolling Text",
+      "category": "Custom zerance"
+    }
+  ]
+}
+{% endschema %}

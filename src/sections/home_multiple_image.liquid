@@ -1,0 +1,80 @@
+<section class="home_multiple_image">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 relative">
+      <img class="height-500" src="{{ section.settings.left_image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
+      <h3 class="absolute text-left">{{ section.settings.text_left }}
+    </div>
+    <div class="col-xs-12 col-md-8 relative height-500">
+      <h2 class="absolute section-title">{{ section.settings.title }}</h2>
+      <h4 class="absolute">{{ section.settings.subtitle }}</h4>
+      <h3 class="absolute center-text">{{ section.settings.text }}</h3>
+      <img class="height-500" src="{{ section.settings.right_image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
+      <img class="absolute image-center" src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}">
+      <a class="cta" href="{{ section.settings.link }}">{{ section.settings.cta }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "home_multiple_image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Image de gauche"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Image de droite"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image centré transparente"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "CONTACTWEAR"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous titre",
+      "default": "(N) CLOTHING ENGINEERED FOR THE ACTION OF ONE FORCE COMING INTO DIRECT CONTACT WITH ANOTHER."
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Texte",
+      "default": "SEE: TACKLE , TAKEDOWN, BLOCK, KICK, PUNCH, THROW CHALLENGE"
+    },
+    {
+      "type": "text",
+      "id": "text_left",
+      "label": "Texte partie gauche",
+      "default": "READY FOR MORE"
+    },
+    {
+      "type": "collection",
+      "id": "link",
+      "label": "Link vers"
+    },
+    {
+      "type": "text",
+      "id": "cta",
+      "label": "Titre Call to action",
+      "default": "SHOP CONTACTWEAR"
+    }
+  ],
+  "presets": [
+    {
+      "name": "home multiple image",
+      "category": "Custom zerance"
+    }
+  ]
+}
+{% endschema %}

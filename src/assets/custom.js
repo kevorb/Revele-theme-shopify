@@ -124,6 +124,13 @@ $('.slider-avis-uniq.owl-carousel').owlCarousel({
   navText : ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>']
 });
 
+$('.slider-avis-fourth.owl-carousel').owlCarousel({
+  loop:true,
+  items:4,
+  nav:true,
+  dots :false,
+  navText : ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>']
+});
 
 
 /********************
