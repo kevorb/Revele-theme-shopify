@@ -34,7 +34,14 @@
             {% unless collection.metafields.global.link_all_1 == blank %}
               <a href="{{ collection.metafields.global.link_all_1 }}">
             {% endunless %}
-                <img src="{{ collection.metafields.global.image_all_1 }}" alt="revele">
+            <script>
+            var temp1 = "";
+            var temp2 = "";
+            </script>
+                <img
+                onmouseover="temp1 = $(this).attr('src');$(this).attr('src', '{{ collection.metafields.global.image_all_hover_1 }}')"
+                onmouseleave="$(this).attr('src', temp1)"
+                 src="{{ collection.metafields.global.image_all_1 }}" alt="revele">
                 <div class="absolute collection_first_absolute">
                   <h4>{{ collection.metafields.global.title_all_1 }}</h4>
                   <button class="cta">{{ collection.metafields.global.cta_all_1 }}</button>
@@ -49,9 +56,17 @@
             {% unless collection.metafields.global.link_all_2 == blank %}
               <a href="{{ collection.metafields.global.link_all_2 }}">
             {% endunless %}
-                <img src="{{ collection.metafields.global.image_all_2 }}" alt="revele">
+                <img
+                onmouseover="temp2 = $(this).attr('src');$(this).attr('src', '{{ collection.metafields.global.image_all_hover_2 }}')"
+                onmouseleave="$(this).attr('src', temp2)"
+                src="{{ collection.metafields.global.image_all_2 }}" alt="revele">
                 <div class="absolute collection_second_absolute">
                   <button class="cta">{{ collection.metafields.global.cta_all_2 }}</button>
+                </div>
+                <div class="absolute absolute-product-info product_info">
+                    {% assign productkit = all_products.revele-kit %}
+                    {{ productkit.title }}
+                    <span class="product_price">{{ productkit.price | money }}</span>
                 </div>
             {% unless collection.metafields.global.link_all_2 == blank %}
               </a>

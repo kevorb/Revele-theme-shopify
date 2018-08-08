@@ -36,6 +36,13 @@ $specialRed:#ed2b4a;
 *********************************/
 
 $header_icon_size:25px;
+$footer_icon_size:32px;
+
+.footer_icon {
+  width: $footer_icon_size;
+  height: $footer_icon_size;
+  object-fit: contain;
+}
 
 h1, h2, h3, h4, h5  {
   color:$black;
@@ -338,6 +345,11 @@ footer {
     .collection_second_absolute {
       right: 20px;
       top:45%;
+    }
+    .absolute-product-info {
+      width: 100%;
+      bottom: 0;
+      background: $white;
     }
     .collection_product_grid_large {
       .product_info {
@@ -1030,13 +1042,14 @@ footer {
         .text-left {
           position: absolute;
           top: 36%;
-          right: -18%;
+          right: -22%;
           -webkit-transform: rotate(-90deg);
           -moz-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
           -o-transform: rotate(-90deg);
           transform: rotate(-90deg);
           color: black;
+          @include size_xxl;
         }
         .cta {
           position: absolute;
@@ -1056,13 +1069,14 @@ footer {
           left: 40%;
           text-align: left;
           font-size: 17px;
+          z-index: 9;
         }
         h3.center-text {
           color:$white;
           width: 40%;
           margin-left: 38%;
           text-align: left;
-          top: 240px;
+          top: 190pt;
           z-index: 9;
         }
         .section-title {
@@ -1074,7 +1088,7 @@ footer {
           padding-left: 50px;
           top: 30px;
           right: 30px;
-          @include size_xxxsl;
+          @include size_xxl;
           @include gobold;
         }
       }
@@ -1085,6 +1099,7 @@ footer {
     &.rolling-text {
       width: 200vw;
       margin-left: -50vw;
+      margin-top:30px;
       .rolling-text-container {
         padding: 14px 0;
         border-top:10px solid $black;
@@ -1101,7 +1116,7 @@ footer {
     }
     &.home_avis {
       padding: 50px;
-      padding-top: 80px;
+      padding-bottom: 0;
       .slider-avis-container {
         .align_center_avis {
           text-align: center;
@@ -1340,16 +1355,36 @@ footer {
   .template-index { section { &.two-images-with-text { h2 {
         p {
             letter-spacing: 1.5px;
-            @include size_m;
+            @include size_mxl;
         }
       }
       .cta_container {
-        bottom:13%;
-          .cta { @include size_xs;border-width:2px; }
+        bottom:18%;
+          .cta { @include size_m;border-width:2px; }
         }
       }
     }
   }
+  .template-index section.two-images-with-text .contain { object-fit: contain;margin-top: 20px;}
+  .template-index section.product-with-video .col-sm-5 { display: none;}
+  .template-index section.home_multiple_image .col-md-4 { display: none;}
+  .template-index section.home_multiple_image .height-500 {
+    height: 340px;
+    .section-title {
+      letter-spacing: 13px;
+      right: 20px;
+      @include size_ml;
+      -webkit-text-stroke-width: 1px;
+    }
+  }
+  .template-index section.home_multiple_image .relative h3.center-text { display: none;}
+  .template-index section.home_multiple_image .relative .cta {
+    right: 40px;
+    bottom: 20px;
+    @include size_m;
+  }
+  .template-index .container-new .product_info {@include size_xs;margin-bottom: 15px;}
+  .template-index section.home_multiple_image .relative .image-center {top:0;left:0;}
   .template-index section.home_avis {
       padding: 80px 0px 0 30px;
     }
