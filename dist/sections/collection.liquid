@@ -1,4 +1,4 @@
-<div class="page-width">
+<div class="container-new">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">
       <h2>{{ section.settings.title | escape }}</h2>
@@ -27,7 +27,9 @@
   <ul class="grid grid--uniform grid--view-items">
     {% for product in collection.products limit: product_limit %}
       <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
-        {% include 'product-card-grid', max_height: max_height %}
+        <a href="{{ product.url | within: collection }}">
+          {% include 'product-grid-new' %}
+        </a>
       </li>
     {% else %}
 

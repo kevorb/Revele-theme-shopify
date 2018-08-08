@@ -129,7 +129,16 @@ $('.slider-avis-fourth.owl-carousel').owlCarousel({
   items:4,
   nav:true,
   dots :false,
-  navText : ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>']
+  navText : ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>'],
+  responsive : {
+    // breakpoint from 0 up
+    0 : {
+        items : 2
+    },
+    768 : {
+        items : 4
+    }
+  }
 });
 
 
@@ -139,7 +148,7 @@ $('.slider-avis-fourth.owl-carousel').owlCarousel({
 
 $('.marquee').marquee({
     //speed in milliseconds of the marquee
-    duration: 8000,
+    duration: 16000,
     //gap in pixels between the tickers
   //  gap: 50,
     //time in milliseconds before the marquee will start animating

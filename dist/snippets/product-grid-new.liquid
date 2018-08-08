@@ -1,7 +1,7 @@
 {% assign image_crop = false %}
 {% for image in product.images %}
   {% if image.alt == 'crop' %}
-    {% assign cropurl = image.src | img_url: 'large' %}
+    {% assign cropurl = image.src | img_url: 'master' %}
 	{% assign image_crop = true %}
   {% endif %}
 {% endfor %}
@@ -14,7 +14,7 @@ onmouseover="temp{{ product.id }} = $(this).attr('src');$(this).attr('src', '{{ 
 onmouseleave="$(this).attr('src', temp{{ product.id }})"
 {% endif %}
 
-src="{{ product.featured_image.src | product_img_url: 'original' }}" alt="{{ product.featured_image.alt }}">
+src="{{ product.featured_image.src | product_img_url: 'master' }}" alt="{{ product.featured_image.alt }}">
 <div class="product_info">
   {% if product.title == "The Revelia w/o shoulder pads" %}
   THE REVELIA<BR/>

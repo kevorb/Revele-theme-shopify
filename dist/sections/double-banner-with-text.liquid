@@ -1,0 +1,60 @@
+<section class="double-banner-with-text">
+  <img class="" src="{{ section.settings.image_top | img_url : 'master' }}" alt="{{ section.settings.image_top.alt }}">
+  <div class="relative">
+    <img class="" src="{{ section.settings.image_bottom | img_url : 'master' }}" alt="{{ section.settings.image_bottom.alt }}">
+    <div class="absolute">
+      <h2>{{ section.settings.title }}</h2>
+      <div class="margin-left">
+        <h4 class="red">{{ section.settings.subtitle }}</h4>
+        <a class="cta" href="{{ section.settings.url }}" >{{ section.settings.cta }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Double banner with text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_top",
+      "label": "Bannière top"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom",
+      "label": "Bannière bottom"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "KICK IT UP A NOTICE"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous Titre",
+      "default": "GO FULL SPEED WITH OUR TRAINING GEAR"
+    },
+    {
+      "type": "text",
+      "id": "cta",
+      "label": "Text call to action",
+      "default": "DISCOVER THE COLLECTION"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Lien",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Double banner with text",
+      "category": "Custom zerance"
+    }
+  ]
+}
+{% endschema %}

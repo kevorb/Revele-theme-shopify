@@ -84,6 +84,8 @@ textarea, input, button { outline: none; }
 .inline-block {display: inline-block;}
 .flex { display:flex;}
 
+.red { color:red; }
+
 
 .cta {
   @include size_xl;
@@ -132,7 +134,7 @@ textarea, input, button { outline: none; }
       .menu_center {
         width: calc(100% - 600px);
         text-align: center;
-        line-height: 65px;
+        line-height: 42px;
         .item_menu {
           display: inline;
           color: $black;
@@ -144,7 +146,7 @@ textarea, input, button { outline: none; }
       .menu_right {
         width: 300px;
         text-align: right;
-        line-height: 65px;
+        line-height: 42px;
         a {
           color:$black;
           svg, .fa, .fas, .far {
@@ -555,6 +557,7 @@ footer {
     margin-top: -10px;
     .red { color:$red; }
     .flex_revelia { width:55%; margin:auto;}
+    .flex-color { display: inline-flex;text-align: center;}
     .product-special-swatch-revelia {
       margin-bottom: 0;
       margin-top: 5pt;
@@ -1098,6 +1101,7 @@ footer {
     }
     &.home_avis {
       padding: 50px;
+      padding-top: 80px;
       .slider-avis-container {
         .align_center_avis {
           text-align: center;
@@ -1111,6 +1115,14 @@ footer {
             }
           }
           .avis-text-container {
+            padding: 20px;
+            @include size_m;
+          }
+          .avis-info-container {
+            @include titi;
+            padding: 0 20px;
+            @include size_s;
+            color:$black;
           }
         }
         .owl-prev {
@@ -1150,6 +1162,35 @@ footer {
     &.section-cta {
       text-align: center;
       margin: 20px auto;
+    }
+    &.double-banner-with-text {
+      margin-top: 70px;
+      .absolute {
+        top:10%;
+        left: 40px;
+        h2 { @include size_xxxl;}
+        .margin-left {
+          margin-left:50px;
+          margin-top:10px;
+          h4 { margin-bottom: 30
+            px;}
+        }
+      }
+    }
+    &.two-images {
+      margin-top: 20px;
+    }
+  }
+  .container-new {
+    padding: 25pt;
+    .product_info {
+      padding-top: 10px;
+      @include gobold_ita;
+      @include size_s;
+      color:$black;
+      .product_price {
+        display: block;
+      }
     }
   }
 }
@@ -1309,7 +1350,15 @@ footer {
       }
     }
   }
-
+  .template-index section.home_avis {
+      padding: 80px 0px 0 30px;
+    }
+    .template-index section.home_avis .slider-avis-container .align_center_avis .avis-text-container { @include size_s;}
+    .template-index section.home_avis .slider-avis-container .align_center_avis .avis-info-container { @include size_xs;}
+    .template-index section.double-banner-with-text .absolute h2 { @include size_m;margin-bottom: 0;}
+    .template-index section.double-banner-with-text .absolute .margin-left { margin-left: 15px;margin-top: 0 !important;}
+    .template-index section.double-banner-with-text .absolute .margin-left h4 { @include size_s;margin-bottom: 10px;}
+    .template-index section.double-banner-with-text .absolute .margin-left .cta { @include size_s; border-width: 2px;}
 
 }
 /* little fix - TODO decalage page shpo   */
@@ -1321,6 +1370,6 @@ footer {
 
 @media all and (min-width: 750px) {
   .main-content {
-      padding-top: 15px;
+      padding-top: 0;
   }
 }

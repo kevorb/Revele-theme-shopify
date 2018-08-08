@@ -1,0 +1,29 @@
+<section class="two-images">
+  <div class="flex">
+    <img class="img-cover" src="{{ section.settings.image_left | img_url : 'master' }}" alt="{{ section.settings.image_left.alt }}">
+    <img class="img-cover" src="{{ section.settings.image_right | img_url : 'master' }}" alt="{{ section.settings.image_right.alt }}">
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Two images",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Image left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Image right"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two images",
+      "category": "Custom zerance"
+    }
+  ]
+}
+{% endschema %}
