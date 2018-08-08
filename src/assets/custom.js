@@ -164,15 +164,15 @@ $('.marquee').marquee({
 ********************/
 
 $(document).ready(function(){
-  $('#active_popup').on('click', function() {
+  $('.active_popup').on('click', function() {
     var popup_name = $(this).attr('data-popup');
     $('.popup').each(function(){
       if ($(this).hasClass(popup_name))
         $(this).fadeIn();
     });
   });
-  $('.popup').on('click', function() {
-    $(this).fadeOut();
+  $('.popup .absolute-cross').on('click', function() {
+    $(this).parent('.popup').fadeOut();
   });
 });
 

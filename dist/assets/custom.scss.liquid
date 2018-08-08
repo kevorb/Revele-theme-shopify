@@ -590,6 +590,15 @@ footer {
       }
     }
   }
+  .picto_sizing_chart {
+    display: inline-block;
+    height: 47px;
+    vertical-align: baseline;
+    top: 6px;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+  }
 }
 /********************************
     RELATED PRODUCT
@@ -881,6 +890,18 @@ footer {
         margin-right: -10%;
         padding-top: 50px;
         margin-top: 60px;
+        .picto_sizing_chart {
+          display: inline-block;
+          height: 65px;
+          vertical-align: baseline;
+          top: 6px;
+          position: relative;
+          margin-left: 10px;
+          cursor: pointer;
+          position: relative;
+          top: 28px;
+          margin-right: 20px;
+        }
         h2 {
           @include gobold;
           margin-left: 20px;
@@ -965,6 +986,17 @@ footer {
     background: white;
     overflow: scroll;
     padding: 40px 30px 30px 30px;
+  }
+  &.sizing-chart {
+    .absolute-cross { top:calc(10vh + 10px);right:calc(10% + 10px);color:$grey;cursor: pointer;}
+    b i { @include gobold_ita; font-weight:400; font-size: 20px;}
+    h5 {
+      @include titi;
+      font-weight: 100;
+      .subtitle {
+        @include gobold;
+      }
+    }
   }
 }
 

@@ -1,6 +1,9 @@
 <section class="title-text-product">
     <h2>{{ section.settings.title }}</h2>
-    {{ section.settings.text }}
+    <div class="flex">
+      <img data-popup="sizing-chart" class="active_popup picto_sizing_chart" src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/picto_sizing_chart.png?3300101072920368495" alt="size chart">
+      {{ section.settings.text }}
+    </div>
     <div class="row">
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product] %}
