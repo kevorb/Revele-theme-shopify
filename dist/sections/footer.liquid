@@ -8,7 +8,7 @@
         {% if linklists[section.settings.footer_linklist].links.size > 0 %}
           <ul class="footer_linklist">
             {% for link in linklists[section.settings.footer_linklist].links %}
-              <li class="footer_linklist-item">
+              <li {% if link.title == "Delivery & returns"%}data-popup="delivery-returns" class="active_popup footer_linklist-item" {% else %}class="footer_linklist-item"{% endif %}>
                 <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
               </li>
             {% endfor %}

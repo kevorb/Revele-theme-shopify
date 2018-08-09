@@ -170,6 +170,7 @@ $(document).ready(function(){
       if ($(this).hasClass(popup_name))
         $(this).fadeIn();
     });
+    return false;
   });
   $('.popup .absolute-cross').on('click', function() {
     $(this).parent('.popup').fadeOut();
