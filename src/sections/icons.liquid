@@ -1,14 +1,52 @@
+<style>
+  .icon-des {
+    height: 120px;
+  }
+  .icon-des p {
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 0;
+  }
+</style>
 <section class="icons row">
   {% for block in section.blocks %}
     <div class="col-xs-6 col-sm-4">
-      <div class="icons_icon">
+      <div class="icons_icon icon-{{ forloop.index0 }}">
         <img src="{{ block.settings.image | img_url : 'master' }}" alt="{{ block.settings.image.alt }}">
         <h3>{{ block.settings.title }}</h3>
-        {{ block.settings.text }}
+        <div class="icon-des">{{ block.settings.text }}<span class="readmore readmore-{{ forloop.index0 }}">+<span></div>
+        <script>
+          $(document).ready(function () {
+            $('.readmore-{{ forloop.index0 }}').click(function (event) {
+              var description = document.querySelector('.icon-{{ forloop.index0 }} .icon-des p');
+              if (description.style.height === '72px'){
+                description.style.height = 'auto';
+              } else if (description.style.height === 'auto'){
+                description.style.height = '72px';
+              }
+              else{
+                description.style.height = '72px';
+              }
+            $(this).text($(this).text() == '-' ? '+' : '-');
+            });
+          });
+        </script>
       </div>
     </div>
   {% endfor %}
 </section>
+<script>
+  $(document).ready(function(){
+    $('.icons_icon').each(function(){
+      console.log(this);
+      if ($(this).find('.icon-des p').height() <= 72)
+        $(this).find('.readmore').fadeOut(0);
+      else {
+          $(this).find('.icon-des p').height(72);
+      }
+    })
+  })
+</script>
 {% schema %}
 {
   "name": "Icons",

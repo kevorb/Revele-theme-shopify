@@ -37,10 +37,14 @@ function resize_collection_image() {
 }
 
 $(document).ready(function() {
+  $('.image-revelia-collection').height($('.image-revelia-collection').width());
+
   resize_collection_image();
   $( window ).resize(function() {
     if ($(window).width() >= 767)
       resize_collection_image();
+  // resize collection image revelia - carré
+  $('.image-revelia-collection').height($('.image-revelia-collection').width());
   });
 });
 

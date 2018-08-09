@@ -1,8 +1,10 @@
 <section class="title-text-image">
   <h2>{{ section.settings.title }}</h2>
-  {{ section.settings.text }}
-  <div class="image_container">
-    <img src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}" >
+  <div class="flex">
+    <div class="image_container">
+      <img src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}" >
+    </div>
+    {{ section.settings.text }}
   </div>
 </section>
 {% schema %}

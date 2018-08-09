@@ -93,6 +93,10 @@ textarea, input, button { outline: none; }
 
 .red { color:red; }
 
+.btn {
+    @include gobold;
+    font-weight: 100;
+}
 
 .cta {
   @include size_xl;
@@ -131,7 +135,7 @@ textarea, input, button { outline: none; }
     display:none;
   }
   .header_large {
-    padding: 40px 30px 20px;
+    padding: 20px 30px 25px;
     @include gobold;
     .header_mini {
       display: flex;
@@ -321,7 +325,7 @@ footer {
     padding:0 20pt;
   }
   .collection_menu {
-    padding: 0 0 50px;
+    padding: 0 0 30px;
     .collection_menu_item {
       padding:0 10px;
       @include size_ml;
@@ -333,6 +337,21 @@ footer {
     }
   }
   .collection_all {
+    .title_container {
+      margin-top:0px;
+      .title_revelia {
+          top: 196px;
+         color: $black;
+         left: -13%;
+         z-index: 9;
+         -webkit-transform: rotate(-90deg);
+         -moz-transform: rotate(-90deg);
+         -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
+         transform: rotate(-90deg);
+         @include size_xxl;
+      }
+    }
     .collection_first_absolute {
       right: 20px;
       top:25%;
@@ -352,6 +371,17 @@ footer {
       background: $white;
     }
     .collection_product_grid_large {
+      .image-revelia-collection { width:100%; object-fit: cover;}
+      .info {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        h2 {margin-bottom: 0;}
+        h4 {margin-top: 0;@include size_l;}
+        .red { color:$red;}
+        .product-price {padding: 0;}
+        .mini-img { border:2px solid $black;}
+      }
       .product_info {
         padding-left: 10px;
         padding-top: 10px;
@@ -423,7 +453,7 @@ footer {
         .price { margin-bottom: 0;width:auto;}
         .fa-info-circle { color:$grey; cursor: help; font-size: 14pt;}
         .info_price {
-          @include size_xs;
+          @include size_s;
           min-width: 300px;
           position: absolute;
           bottom: 0;
@@ -460,9 +490,10 @@ footer {
           .header {
             text-align: center;
             margin-top: 20pt;
-            h4 { @include size_l; }
+            h4 { @include size_ml; }
             h5 {
               color:$grey;
+              @include size_s;
               @include titi;
 
             }
@@ -496,6 +527,19 @@ footer {
               background: $white;
               border: 2px solid $black;
             }
+            &.with-shoulder-pads , &.w-o-shoulder-pads {
+              width: 80px;
+              height: 80px;
+              line-height: 80px;
+              &.selected {
+                label { background: $red; }
+              }
+               label {
+                 width: 80px;
+                 height: 80px !important;
+                 line-height: 80px !important;
+               }
+            }
           }
         }
       }
@@ -515,6 +559,10 @@ footer {
             h6 {
               margin: 0;
               text-align: center;
+              @include gobold;
+              font-weight: 100;
+              margin-top: 10pt;
+              @include size_s;
             }
           }
         }
@@ -592,7 +640,7 @@ footer {
   }
   .picto_sizing_chart {
     display: inline-block;
-    height: 47px;
+    height: 38px;
     vertical-align: baseline;
     top: 6px;
     position: relative;
@@ -666,8 +714,33 @@ footer {
     .cart__row.cart__header {
       display: none;
     }
+    table {
+      @include gobold;
+      color:$black;
+      a {
+        color:$black;
+      }
+      .list-view-item__title { @include size_s;}
+      .cart__meta-text {
+        font-style: initial;
+        @include size_xs;
+      }
+      .cart__price-wrapper.cart-flex-item { display: none;}
+      .cart__remove { display: none;}
+    }
     .border-top { border-top:0 }
     .border-bottom { border-bottom:1px solid black; }
+    .cart__footer {
+      @include gobold;
+      .cart__shipping { @include titi; margin-right: 50px;margin-bottom: 20px;}
+      .cart__subtotal { margin-right: 50px;}
+    }
+    .cart__qty {
+      text-align: center;
+      position: relative;
+      right: 10px;
+    }
+    .empty-page-content h1 { display: none;}
     footer {
       padding-left: 0 !important;
       padding-right: 0 !important;
@@ -683,7 +756,7 @@ footer {
 }
 
 /********************************
-    CART
+    CART AND SIDE CART
 *********************************/
 
 .cart-new-template {
@@ -700,6 +773,47 @@ footer {
   }
 }
 
+/**********************************
+  FULL CART
+**********************************/
+
+.full-cart {
+  .cart-new-template {
+    h1 {
+      color:$red;
+      margin-top: 18pt;
+    }
+    .cart {
+      .border-top { border:0; }
+      .border-bottom:last-child { border-bottom:1px solid $black; }
+      .cart__meta-text { font-style: initial; }
+      th, th a {
+        @include gobold;
+        color:$black;
+      }
+      td, td a {
+        @include gobold;
+        color:$black;
+        a.btn {
+          @include gobold;
+          border:1px solid $black;
+          padding: 5px 7px;
+          background:$white;
+          color:$black;
+          &:hover {
+            background: $black;
+            color:$white;
+          }
+        }
+      }
+      .cart__footer {
+        @include gobold;
+        .cart__shipping { @include titi; margin-right: 50px;margin-bottom: 20px;}
+        .cart__subtotal { margin-right: 50px;}
+      }
+    }
+  }
+}
 
 /********************************
     HOW IT WORKS
@@ -757,10 +871,6 @@ footer {
         }
       }
       &.how-it-works-multiple-image-cta {
-      /*  width: 100vw;
-        margin-left:-21%;*/
-        margin-left: -11%;
-        margin-right: -11%;
         padding: 30px 0 30px;
         .align_bottom {
           align-self:center;
@@ -775,7 +885,7 @@ footer {
           p { @include size_mxl;}
         }
         .cta-container {
-          width: 80%;
+          width: 110%;
           margin: auto;
           text-align: right;
           margin-top: 10px;
@@ -783,12 +893,23 @@ footer {
         }
       }
       &.title-text-image {
+        margin-left: -10%;
+        margin-right: -10%;
         margin-top: 60px;
         padding-top: 40px;
+        .flex {
+          margin-top: 40px;
+          .image_container {
+            width:60%;
+          }
+          p {
+            width:35%;
+            margin-left: 5%;
+          }
+        }
         h2 {
           text-align:left;
           margin: 0;
-          margin-left: -10%;
           @include size_xxxsl;
         }
         p {
@@ -886,8 +1007,8 @@ footer {
         }
       }
       &.title-text-product {
-        margin-left: -10%;
-        margin-right: -10%;
+      //  margin-left: -10%;
+      //  margin-right: -10%;
         padding-top: 50px;
         margin-top: 60px;
         .picto_sizing_chart {
@@ -905,6 +1026,12 @@ footer {
         h2 {
           @include gobold;
           margin-left: 20px;
+          &.section-how-title {
+            margin-left: -10%;
+          }
+          &.section-product-name {
+            @include size_l;
+          }
         }
         p {
           @include size_mxl;
@@ -915,7 +1042,7 @@ footer {
           align-items: center;
           padding-top: 20px;
           h2 {margin-bottom: 0;}
-          h4 {margin-top: 0;}
+          h4 {margin-top: 0;@include size_mxl;}
           .red { color:$red;}
           .product-price {padding: 0;}
           .mini-img { border:2px solid $black;}
@@ -1074,7 +1201,7 @@ footer {
         .text-left {
           position: absolute;
           top: 36%;
-          right: -22%;
+          right: -29.5%;
           -webkit-transform: rotate(-90deg);
           -moz-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
@@ -1383,7 +1510,7 @@ footer {
     width: 150px;
     height:150px;
   }
-
+  /* index page mobile */
   .template-index { section { &.two-images-with-text { h2 {
         p {
             letter-spacing: 1.5px;
@@ -1427,12 +1554,38 @@ footer {
     .template-index section.double-banner-with-text .absolute .margin-left h4 { @include size_s;margin-bottom: 10px;}
     .template-index section.double-banner-with-text .absolute .margin-left .cta { @include size_s; border-width: 2px;}
 
+    /* collection page mobile */
+    .mobile-nav__link {
+      @include gobold;
+      color:$black;
+    }
+    .collection_new .collection_menu {
+      padding: 0 0 15px;
+    }
+    .collection_new .collection_all .title_container .title_revelia {
+      position: static;
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -ms-transform: rotate(0);
+      -o-transform: rotate(0);
+      transform: rotate(0);
+      @include size_ml;
+    }
+    .collection_new .collection_all .collection_product_grid_large .info { display: block;}
+    .collection_new .collection_all .collection_product_grid_large .info h2 { @include size_m;}
+    .collection_new .collection_all .collection_product_grid_large .info .red { @include size_s;margin-bottom: 5px;}
+    .collection_new .collection_all .collection_product_grid_large .info .product-price { padding-left: 15px;@include size_xs;}
+
 }
 /* little fix - TODO decalage page shpo   */
 
 .container-fluid {
   padding-left: 20pt;
   padding-right: 20pt;
+}
+
+.template-page .rte a:not(.btn).cta {
+    border-bottom: 4px solid $black;
 }
 
 @media all and (min-width: 750px) {

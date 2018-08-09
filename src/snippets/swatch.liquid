@@ -47,12 +47,12 @@
   <div class="header">
     <h4>choose your size <img data-popup="sizing-chart" class="active_popup picto_sizing_chart" src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/picto_sizing_chart.png?3300101072920368495" alt="size chart"></h4>
     <h5>
-      To find your perfect size, be sure to check our sizing chart<br>
+      To find your perfect size, be sure to check our sizing chart above.<br>
       Don’t hesitate to contact us if you have any questions about your size !
     </h5>
   </div>
   {% else %}
-  <div class="header">{{ swatch }}</div>
+  <div class="header"><h4>{{ swatch }}</h4></div>
   {% endif %}
   {% assign values = '' %}
   {% for variant in product.variants %}
@@ -61,6 +61,24 @@
       {% assign values = values | join: ',' %}
       {% assign values = values | append: ',' | append: value %}
       {% assign values = values | split: ',' %}
+      {% assign val = value | escape %}
+      {% if val == "With shoulder pads"%}
+      <div data-value="With shoulder pads" class="swatch-element with-shoulder-pads available">
+        <input id="swatch-0-with-shoulder-pads" type="radio" name="option-0" value="With shoulder pads" checked="">
+        <label for="swatch-0-with-shoulder-pads">
+          <img src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-avec-epaules-icon.png?13440809533093614531" alt="with shoulder pads">
+          <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0123/1690/1434/t/3/assets/soldout.png?1643496969014266889">
+        </label>
+      </div>
+      {% elsif val == "w/o shoulder pads" %}
+      <div data-value="w/o shoulder pads" class="swatch-element w-o-shoulder-pads available">
+        <input id="swatch-0-w-o-shoulder-pads" type="radio" name="option-0" value="w/o shoulder pads">
+        <label for="swatch-0-w-o-shoulder-pads">
+          <img src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-sans-epaules-icon.png?13440809533093614531" alt="without shoulder pads">
+          <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0123/1690/1434/t/3/assets/soldout.png?1643496969014266889">
+        </label>
+      </div>
+      {% else %}
       <div data-value="{{ value | escape }}" class="swatch-element {% if is_color %}color {% endif %}{{ value | handle }} {% if variant.available %}available{% else %}soldout{% endif %}">
         {% if is_color %}
         <div class="tooltip">{{ value }}</div>
@@ -77,6 +95,7 @@
         </label>
         {% endif %}
       </div>
+      {% endif %}
     {% endunless %}
     {% if variant.available %}
     <script>

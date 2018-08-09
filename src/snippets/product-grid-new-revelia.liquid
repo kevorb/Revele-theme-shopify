@@ -1,0 +1,43 @@
+
+{% assign image_crop = false %}
+{% for image in product.images %}
+  {% if image.alt == 'crop' %}
+    {% assign cropurl = image.src | img_url: 'master' %}
+	{% assign image_crop = true %}
+  {% endif %}
+{% endfor %}
+<script>
+  var temp{{ product.id }} = "";
+</script>
+<img
+{% if image_crop == true %}
+onmouseover="temp{{ product.id }} = $(this).attr('src');$(this).attr('src', '{{ cropurl }}')"
+onmouseleave="$(this).attr('src', temp{{ product.id }})"
+{% endif %}
+class="image-revelia-collection"
+src="{{ product.featured_image.src | product_img_url: 'master' }}" alt="{{ product.featured_image.alt }}">
+
+<div class="info row">
+  <div class="col-sm-7 col-xs-12">
+    <h2>THE REVELIA</h2>
+    <h4 class="red">
+      {% if product.title == "The Revelia w/o shoulder pads" %}
+      NO SHOULDER PADS
+      {% elsif product.title == "The Revelia with shoulder pads" %}
+      WITH SHOULDER PADS
+      {% endif %}
+    </h4>
+  </div>
+  <div class="col-sm-2 col-xs-7 product-price">
+    <h5>{{ product.price | money }}</h5>
+  </div>
+  <div class="col-sm-3 col-xs-5">
+    <img
+    {% if product.title == "The Revelia w/o shoulder pads" %}
+    src="//cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-sans-epaules-icon.png?v=1531952190"
+    {% elsif product.title == "The Revelia with shoulder pads" %}
+    src="//cdn.shopify.com/s/files/1/0123/1690/1434/files/Revelia-avec-epaules-icon.png?v=1531952200"
+    {% endif %}
+     class="mini-img" alt="{{ block.settings.image.alt }}" >
+  </div>
+</div>

@@ -13,6 +13,9 @@
     <div class="collection_all">
       <div class="row">
         <div class="col-xs-12">
+          <div class="relative title_container">
+            <h1 class="title_revelia absolute">OUR CHEST PROTECTIONS</h1>
+          </div>
           {% for product in collection.products %}
             {% if forloop.index == 3 %}
               {% break %}
@@ -20,7 +23,7 @@
             <div class="col-xs-6 collection_product_grid_large">
               <a href="{{ product.url | within: collection }}">
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                  {% include 'product-grid-new' %}
+                  {% include 'product-grid-new-revelia' %}
                 </div>
               </a>
             </div>

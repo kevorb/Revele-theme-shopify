@@ -1,5 +1,5 @@
 <section class="title-text-product">
-    <h2>{{ section.settings.title }}</h2>
+    <h2 class="section-how-title">{{ section.settings.title }}</h2>
     <div class="flex">
       <img data-popup="sizing-chart" class="active_popup picto_sizing_chart" src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/picto_sizing_chart.png?3300101072920368495" alt="size chart">
       {{ section.settings.text }}
@@ -12,7 +12,7 @@
           <img src="{{ product.featured_image | img_url : 'master' }}" alt="{{ product.featured_image.alt }}" >
           <div class="info row">
             <div class="col-sm-7 col-xs-12">
-              <h2>{{ block.settings.title}}</h2>
+              <h2 class="section-product-name">{{ block.settings.title}}</h2>
               <h4 class="red">{{ block.settings.subtitle}}</h4>
             </div>
             <div class="col-sm-2 col-xs-6 product-price">
