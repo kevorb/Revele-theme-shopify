@@ -1,4 +1,17 @@
 /*********************
+    HEADER MENU
+*********************/
+
+$('.deploy-menu')
+  .mouseenter(function() {
+    $( this ).find(".submenu").slideToggle();
+  })
+  .mouseleave(function() {
+    $( this ).find(".submenu").slideToggle();
+  });
+
+
+/*********************
       RESIZE IMAGE
 *********************/
 

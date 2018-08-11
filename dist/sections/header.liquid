@@ -293,21 +293,32 @@
       <ul class="menu_list">
         {% for link in linklists[section.settings.main_linklist].links %}
         <a href="{{ link.url }}" >
-          <li class="item_menu">
+          <li class="item_menu relative {% if link.links != blank %}deploy-menu{% endif %}">
             {{ link.title }}
+            {% if link.links != blank %}
+            <ul class="submenu absolute">
+              {% for childlink in link.links %}
+                <a href="{{ childlink.url }}" >
+                  <li class="submenu_item">{{ childlink.title }}</li>
+                </a>
+              {% endfor %}
+            </ul>
+            {% endif %}
           </li>
         </a>
         {% endfor %}
       </ul>
     </div>
     <div class="menu menu_right">
+
+      <a href="/search" class="">
+        <i class="fas fa-search"></i>
+      </a>
+
       <a href="/cart" class="">
         {% include 'icon-cart' %}
         {% if cart.item_count > 0 %}
-          <div id="CartCount" class="site-header__cart-count">
-            <span>{{ cart.item_count }}</span>
-            <span class="">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
-          </div>
+            <span>({{ cart.item_count }})</span>
         {% endif %}
         {% comment %}
         {% include 'icon-search' %}
