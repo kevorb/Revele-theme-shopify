@@ -55,8 +55,8 @@
             <h1 class="product-single__title">The revelia</h1>
             {% elsif product.title == "Compression Leggings - Blue" or product.title == "Compression Leggings - Red" %}
             <h1 class="product-single__title">Compression Leggings</h1>
-            {% elsif product.title == "Révèle©Thermo Zipup - Blue" or product.title == "Révèle©Thermo Zipup - Red" %}
-            <h1 class="product-single__title">Révèle©Thermo Zipup</h1>
+            {% elsif product.title == "Révèle©Thermo Zip up - Blue" or product.title == "Révèle©Thermo Zip up - Red" %}
+            <h1 class="product-single__title">Révèle©Thermo Zip up</h1>
             {% else %}
             <h1 class="product-single__title">{{ product.title }}</h1>
             {% endif %}
@@ -134,7 +134,7 @@
                   </div>
                 </div>
               </div>
-              {% elsif product.title == "Révèle©Thermo Zipup - Blue"%}
+              {% elsif product.title == "Révèle©Thermo Zip up - Blue"%}
               <div class="swatch clearfix product-special-swatch">
                 <div class="header">
                   <h4>COLOR : BLUE</h4>
@@ -144,7 +144,7 @@
                   </div>
                 </div>
               </div>
-              {% elsif product.title == "Révèle©Thermo Zipup - Red"%}
+              {% elsif product.title == "Révèle©Thermo Zip up - Red"%}
               <div class="swatch clearfix product-special-swatch">
                 <div class="header">
                   <h4>COLOR : RED</h4>
@@ -228,19 +228,19 @@
 
 
               {% if product.metafields.picto.image_6 == blank %}
-              <div class="col-xs-3 product-metafields-pictos">
+              <div class="col-xs-6 col-sm-3 product-metafields-pictos">
                 <img src="{{ product.metafields.picto.image_1 }}" alt="{{ product.metafields.picto.description_1 }}">
                 <h6>{{ product.metafields.picto.description_1 }}</h6>
               </div>
-              <div class="col-xs-3 product-metafields-pictos">
+              <div class="col-xs-6 col-sm-3 product-metafields-pictos">
                 <img src="{{ product.metafields.picto.image_2 }}" alt="{{ product.metafields.picto.description_2 }}">
                 <h6>{{ product.metafields.picto.description_2 }}</h6>
               </div>
-              <div class="col-xs-3 product-metafields-pictos">
+              <div class="col-xs-6 col-sm-3 product-metafields-pictos">
                 <img src="{{ product.metafields.picto.image_3 }}" alt="{{ product.metafields.picto.description_3 }}">
                 <h6>{{ product.metafields.picto.description_3 }}</h6>
               </div>
-              <div class="col-xs-3 product-metafields-pictos">
+              <div class="col-xs-6 col-sm-3 product-metafields-pictos">
                 <img src="{{ product.metafields.picto.image_4 }}" alt="{{ product.metafields.picto.description_4 }}">
                 <h6>{{ product.metafields.picto.description_4 }}</h6>
               </div>
@@ -298,6 +298,8 @@
     {{ product | json }}
   </script>
 {% endunless %}
+
+{% include 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false %}
 
 
 {% schema %}

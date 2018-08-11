@@ -116,6 +116,25 @@ $(document).ready(function(){
   });
 });
 
+/*********************
+      VIDEO HOME
+*********************/
+
+$(document).ready(function(){
+  $('.video-container-full').on('click', function() {
+    $(this).toggleClass("full-screen");
+    var video = $(this).find('video').eq(0);
+    if (video.get(0).paused) {
+      $(this).find('.video-button').addClass("hide");
+      video.get(0).play();
+    }
+    else {
+      $(this).find('.video-button').removeClass("hide");
+      video.get(0).pause();
+    }
+  });
+});
+
 /********************
   Carrousel avis
 ********************/

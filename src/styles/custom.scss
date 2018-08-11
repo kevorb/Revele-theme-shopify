@@ -35,6 +35,10 @@ $specialRed:#ed2b4a;
 			GENERAL
 *********************************/
 
+body, input, textarea, button, select {
+  @include titi;
+}
+
 $header_icon_size:25px;
 $footer_icon_size:32px;
 
@@ -1141,7 +1145,7 @@ footer {
       }
       h2 {
         color:$white;
-        top: 21%;
+        top: 18%;
         right: 10%;
         text-align: right;
         p {
@@ -1162,6 +1166,19 @@ footer {
       .cta_container {
         right: 10%;
         bottom: 12%;
+      }
+      .full-screen {
+        position:fixed;
+        width:100%;
+        left:0;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+        background:rgba(0, 0, 0, 0.6);
+        video {
+          max-width: 70%;
+          margin:2% 15%;
+        }
       }
       video {
         object-fit: cover;
@@ -1201,13 +1218,14 @@ footer {
         .text-left {
           position: absolute;
           top: 36%;
-          right: -29.5%;
+          right: -33.5%;
           -webkit-transform: rotate(-90deg);
           -moz-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
           -o-transform: rotate(-90deg);
           transform: rotate(-90deg);
           color: black;
+          z-index: 9;
           @include size_xxl;
         }
         .cta {
@@ -1373,7 +1391,7 @@ footer {
 			MEDIA QUERIES
 *********************************/
 
-@media all and (max-width:1280px) {
+@media all and (max-width:1200px) {
   .template-index { section { &.two-images-with-text { h2 {
         p {
             @include size_xl;
@@ -1388,6 +1406,17 @@ footer {
 }
 
 @media all and (max-width:767px) {
+
+  .cta {
+    @include size_xs;
+    border-width: 2px;
+    padding: 2px 7px 2px 5px;
+  }
+  .container-fluid {
+    padding-left: 5pt !important;
+    padding-right: 5pt !important;
+  }
+
   /* header */
   #shopify-section-header div[data-section-id="header"] { display:block; }
   .header_large { display:none; }
@@ -1405,6 +1434,10 @@ footer {
       color:$black;
     }
   }
+  footer .footer_bottom .footer_left .footer_menu .footer_linklist .footer_linklist-item a { @include size_xs;}
+  footer .footer_bottom .footer_left .footer_menu { padding-right: 0;}
+  footer .footer_top { padding-bottom: 15pt;}
+  footer .footer_bottom .footer_left { padding:0;}
 
   /* collection */
   .collection_new .collection_menu .collection_menu_item { @include size_s;padding:0 5px; }
@@ -1445,7 +1478,7 @@ footer {
       left: 30px;
     }
   }
-  .page_howitworks h1 { @include size_xxl; }
+  .page_howitworks h1 { @include size_l; }
   .page_howitworks .content section.title-text-image h2 { @include size_l; }
   .page_howitworks .content section.title-text-image {padding: 0;}
   .page_howitworks .content section.how-it-works-multiple-image-cta .texte p { font-size: 17px;}
@@ -1462,7 +1495,7 @@ footer {
     .cta {left:0;}
   }
 
-  .page_howitworks .content section.slider-avis .slider-avis-container .align_center_avis { display: block;}
+  .page_howitworks .content section.x .slider-avis-container .align_center_avis { display: block;}
 
   .page_howitworks .content section.slider-avis .slider-avis-container .align_center_avis .avis-image-container img {
     float: none;
@@ -1510,6 +1543,28 @@ footer {
     width: 150px;
     height:150px;
   }
+  .page_howitworks .content section.classic-text-left {
+    @include size_m;
+    margin-top: 15px;
+  }
+  .page_howitworks .content { width:75%; }
+  .page_howitworks .content section .cta {
+    font-size: 18pt !important;
+    border-width: 2px !important;
+    padding: 4px 15px 4px 11px !important;
+  }
+  .page_howitworks .content section.title-text-image .flex { display: block;}
+  .page_howitworks .content section.title-text-image .flex .image_container { width: 100%;}
+  .page_howitworks .content section.title-text-image .flex p {
+    width: 100%;
+    margin-left: 0;
+  }
+  .page_howitworks .content section.right-cta {
+    margin-top: 0px;
+    margin-bottom: 35px;
+  }
+
+
   /* index page mobile */
   .template-index { section { &.two-images-with-text { h2 {
         p {
@@ -1573,9 +1628,20 @@ footer {
     }
     .collection_new .collection_all .collection_product_grid_large .info { display: block;}
     .collection_new .collection_all .collection_product_grid_large .info h2 { @include size_m;}
-    .collection_new .collection_all .collection_product_grid_large .info .red { @include size_s;margin-bottom: 5px;}
+    .collection_new .collection_all .collection_product_grid_large .info .red { font-size: 9.5pt;margin-bottom: 5px;}
     .collection_new .collection_all .collection_product_grid_large .info .product-price { padding-left: 15px;@include size_xs;}
+    .collection_new .collection_all .collection_first_absolute h4 { @include size_s;margin-bottom: 5px;}
+    .collection_new .collection_all .collection_first_absolute {
+      right: initial;
+      bottom: 5%;
+      width: 100%;
+      top: inherit;
+    }
 
+    /* product page */
+
+    .product_page .container-fluid .product_details h1.product-single__title { margin-top:15pt;}
+    .product_page .container-fluid .product_details .product-single__description .product_picto .product-metafields-pictos { margin-bottom: 25pt;}
 }
 /* little fix - TODO decalage page shpo   */
 
