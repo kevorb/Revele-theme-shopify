@@ -14,9 +14,18 @@
   {%- assign compare_at_price = current_variant.compare_at_price -%}
   {%- assign price = current_variant.price -%}
 
+<div class="wrapper-slider-images">
+  <i class="fas fa-times"></i>
+  <div class="slide-images owl-carousel owl-theme">
+  {% for image in product.images %}
+    <img src="{{ image.src | product_img_url: 'master' }}" alt="{{ image.alt }}">
+  {% endfor %}
+  </div>
+</div>
+
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-7">
+      <div class="col-xs-12 col-sm-7 product-images">
         <div class="row">
           {% for image in product.images %}
             {% if forloop.index0 >= 1 and forloop.index0 <= 3 %}

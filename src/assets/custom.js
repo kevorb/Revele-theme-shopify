@@ -178,6 +178,26 @@ $('.slider-avis-fourth.owl-carousel').owlCarousel({
 });
 
 
+/***************************
+  Carrousel product page
+***************************/
+
+$('.slide-images').owlCarousel({
+  loop:true,
+  items:1,
+  nav:true,
+  dots :true//,
+//  navText : ['<i class="fa fa-arrow-left" aria-hidden="true"></i>','<i class="fa fa-arrow-right" aria-hidden="true"></i>']
+});
+
+$('.product-images').on('click', function() {
+  $('.wrapper-slider-images').fadeIn();
+});
+
+$('.fa-times').on('click', function(){
+  $('.wrapper-slider-images').fadeOut();
+});
+
 /********************
   Rolling text
 ********************/

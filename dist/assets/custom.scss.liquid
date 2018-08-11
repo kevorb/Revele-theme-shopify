@@ -203,7 +203,7 @@ footer {
   margin-top: 30px;
   .footer_top {
     max-width: 45%;
-    padding-bottom: 85px;
+    padding-bottom: 45px;
     img {
       width: 100%;
       max-width: 420px;
@@ -457,10 +457,43 @@ footer {
 *********************************/
 
 .product_page {
+  .wrapper-slider-images {
+    z-index: 999999;
+    display: none;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.6);
+    .owl-next, .owl-prev {
+      color: white !important;
+      font-size: 40px !Important;
+    }
+    .fa-times {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 50px;
+      color: white;
+      cursor: pointer;
+    }
+    .slide-images {
+      width: 90%;
+      margin: 10vh 5%;
+      img {
+        max-height:75vh;
+        object-fit: contain;
+      }
+    }
+  }
   .jdgm-rev-widg { border:0;}
   .container-fluid {
     padding-left: 35px;
     padding-right: 35px;
+    .product-images {
+      img { cursor: pointer;}
+    }
     .product_details {
       h1 {
         @include size_xl;
@@ -477,13 +510,14 @@ footer {
           @include size_s;
           min-width: 300px;
           position: absolute;
-          bottom: 0;
+          bottom: -10px;
           left: 10pt;
           color: grey;
           @include titi;
           text-transform: none;
           padding: 3px 14px;
           text-align: justify;
+          line-height: 12pt;
         }
         span {
           color: $black;
@@ -1677,11 +1711,19 @@ footer {
       width: 100%;
       top: inherit;
     }
+    .collection_new .collection_image_container { display:none;}
+    .collection_new .little-margin-top-mobile { margin-top: 25pt;}
+    .collection_new .collection_container { margin-top: 0;}
 
     /* product page */
 
     .product_page .container-fluid .product_details h1.product-single__title { margin-top:15pt;}
     .product_page .container-fluid .product_details .product-single__description .product_picto .product-metafields-pictos { margin-bottom: 25pt;}
+    .product_page .container-fluid .product_details h2 .info_price {
+      @include size_xs;
+      min-width: 177px;
+      bottom: -20px;
+    }
 }
 /* little fix - TODO decalage page shpo   */
 
