@@ -129,6 +129,19 @@ $(document).ready(function(){
   });
 });
 
+/********************
+  INIT CHECKOUT
+********************/
+
+$('input[name="checkout"][type="submit"]').on('click', function(){
+  console.log($(this).parent().parent().parent());
+  if (!$(this).parent().parent().parent().parent().find('#check-cart').is(":checked")) {
+    alert("Please accept GTCU");
+    return false;
+  }
+})
+
+
 /*********************
       VIDEO HOME
 *********************/

@@ -11,11 +11,11 @@
   {% if collection.handle == "all" %}
   {% assign begin = 3 %}
     <div class="collection_all">
+      <div class="relative title_container">
+        <h1 class="title_revelia absolute">CHEST PROTECTIONS</h1>
+      </div>
       <div class="row">
         <div class="col-xs-12">
-          <div class="relative title_container">
-            <h1 class="title_revelia absolute">OUR CHEST PROTECTIONS</h1>
-          </div>
           {% for product in collection.products %}
             {% if forloop.index == 3 %}
               {% break %}

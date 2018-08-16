@@ -2,7 +2,9 @@
   <h2>{{ section.settings.title }}</h2>
   <div class="flex">
     <div class="image_container">
-      <img src="{{ section.settings.image | img_url : 'master' }}" alt="{{ section.settings.image.alt }}" >
+      <video autoplay="" loop="" muted="" playsinline="" >
+        <source src="{{ section.settings.video }}" type="video/mp4">
+      </video>
     </div>
     {{ section.settings.text }}
   </div>
@@ -24,9 +26,9 @@
       "default": "<p>We sourced the best technology out there for the Revelia, capable of absorbing up to 90% of shocks against a hard surface, like your chest and shoulders ! Our technology is perfectly encapsulated to allow for ultimate resistance and comfort with it’s seamless finishings.</p>"
     },
     {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image"
+      "type": "text",
+      "id": "video",
+      "label": "url de la video"
     }
   ]
 }

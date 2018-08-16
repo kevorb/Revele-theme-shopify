@@ -112,6 +112,36 @@
           </tbody>
         </table>
       </div>
+
+      {% assign kit = false %}
+      {% assign revelia = false %}
+      {% for item in cart.items %}
+        {% if item.title contains "Revelia" %}
+          {% assign revelia = true %}
+        {% endif %}
+        {% if item.title contains "kit" %}
+          {% assign kit = true %}
+        {% endif %}
+      {% endfor %}
+      {% if revelia == true and kit == false %}
+        {% assign productkit = all_products[section.settings.product] %}
+        <div class="special-offer-kit row">
+          <div class="col-xs-5 col-sm-4">
+            <img class="" src="{{ productkit.featured_image | img_url : 'master' }}" alt="{{ productkit.featured_image.alt }}">
+          </div>
+          <div class="col-xs-7 col-sm-8">
+            <h3>{{ section.settings.title }}</h3>
+            {{ section.settings.subtitle }}
+            <a class="cta" href="{{ productkit.url }}">{{ section.settings.cta }}</a>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="verif-checkbox">
+        <input type="checkbox" id="check-cart" name="subscribe" value="" required="required">
+        I have a read and accepted the General Terms and Conditions of Use of the website
+      </div>
+
       <footer class="cart__footer">
         <div class="grid">
           {% if section.settings.cart_notes_enable %}
@@ -171,6 +201,29 @@
           "fr": "Activer les notes de panier"
         },
         "default": false
+      },
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Titre du special product",
+        "default": "<p>MAKE A KIT ! <i>SAVE 15%</i></p>"
+      },
+      {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "Sous titre",
+        "default": "<p>Buy the Révèle Kit <br>REVELIA + UNDERSHORTS<br>and get your undershorts for 21.90 EUR only !</p>"
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Produit"
+      },
+      {
+        "type": "text",
+        "id": "cta",
+        "label": "Call to action",
+        "default": "BUY THE KIT 130.00 EUR"
       }
     ]
   }

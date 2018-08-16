@@ -1,24 +1,44 @@
 <div class="product_metafields">
-  {% for field in product.metafields.details %}
-  <div class="product_metafield">
-    <h4><span>+ </span> {{ field | first | slice : 1, 100 }}</h4>
-    <p>{{ field | last | newline_to_br }}</p>
-  </div>
-  {% endfor %}
   {% for field in product.metafields.detail %}
   <div class="product_metafield">
-    <h4><span>+ </span> {{ field | first | slice : 1, 100 }}</h4>
-    <p>{{ field | last | newline_to_br }}</p>
+    {% capture title %}{{ field | first | slice : 1, 100 }}{% endcapture %}
+    {% capture response %}{{ field | last | newline_to_br }}{% endcapture %}
+    <h4
+    {% if response contains 'video-container' %}
+    class="video-h4"
+    {% endif %}
+    ><span>+ </span> {{ field | first | slice : 1, 100 }}</h4>
+    <p {% if title == "size and fit" %}class="size_and_fit"{% endif %}>
+      {% if title == "size and fit" %}
+      <img data-popup="sizing-chart" class="active_popup picto_sizing_chart" src="https://cdn.shopify.com/s/files/1/0123/1690/1434/files/picto_sizing_chart.png?3300101072920368495" alt="size chart">
+      {% endif %}
+      <span>
+        {{ field | last | newline_to_br }}
+      </span>
+    </p>
   </div>
   {% endfor %}
 </div>
 
 <script>
+  $('.fa-times').on('click', function(){
+    $(this).parent().find('video').eq(0).get(0).pause();
+    $(this).parent().removeClass('full-screen');
+  });
+
   $('.product_metafield h4').on('click', function() {
-    $('.product_metafield p').slideUp(400);
-  	$(this).next().slideToggle(400);
-    $('.product_metafield h4 span').removeClass("rotate");
-    $(this).find("span").toggleClass("rotate");
+    if ($(this).hasClass('video-h4')) {
+      console.log($(this));
+      $(this).parent().find('.video-container').addClass('full-screen');
+      var video = $(this).parent().find('video').eq(0);
+      video.get(0).play();
+    }
+    else {
+      $('.product_metafield p').slideUp(400);
+    	$(this).next().slideToggle(400);
+      $('.product_metafield h4 span').removeClass("rotate");
+      $(this).find("span").toggleClass("rotate");
+    }
   });
   $('.product_metafield h4').eq(0).click();
 </script>

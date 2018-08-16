@@ -29,7 +29,9 @@
   Never pick related items from those.
 {% endcomment %}
 
+{% comment %}
 {% assign exclusions = 'frontpage,all' | split: ',' %}
+{% endcomment %}
 
 {% comment %}
   Looking for a relevant collection.
@@ -37,6 +39,10 @@
 
 {% if product.metafields.c_f['Related Products'] %}
   {% assign collection = collections[product.metafields.c_f['Related Products']] %}
+{% endif %}
+
+{% if template == 'cart' %}
+  {% assign collection = collections.all %}
 {% endif %}
 
 {% assign found_a_collection = false %}
